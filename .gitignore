@@ -1,0 +1,7 @@
+# Directories I don't want to be tracked
+fish/
+iterm2/
+raycast/
+
+# Mac-OS files
+.DS_Store
