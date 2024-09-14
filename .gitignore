@@ -6,3 +6,6 @@ karabiner/
 
 # Mac-OS files
 .DS_Store
+
+# Ignore lazy-lock (shows the plugin's branch and commit)
+nvim/lazy-lock.json
