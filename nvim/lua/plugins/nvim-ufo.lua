@@ -11,7 +11,12 @@ return {
     -- keybindings
     vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
     vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
-    vim.keymap.set("n", "zK", require("ufo").peekFoldedLinesUnderCursor(), { desc = "Peek fold" })
+    vim.keymap.set("n", "zK", function()
+      local winid = require("ufo").peekFoldedLinesUnderCursor()
+      if not winid then
+        vim.lsp.buf.hover()
+      end
+    end, { desc = "Peek fold" })
 
     -- provider
     require("ufo").setup({
