@@ -56,15 +56,13 @@ return {
   {
     "olimorris/onedarkpro.nvim",
     colors = {}, -- Override default colors or create your own
-    highlights = {
-      Comment = { italic = true },
-    }, -- Override default highlight groups or create your own
+    highlights = {}, -- Override default highlight groups or create your own
     styles = { -- For example, to apply bold and italic, use "bold,italic"
       types = "NONE", -- Style that is applied to types
       methods = "NONE", -- Style that is applied to methods
       numbers = "NONE", -- Style that is applied to numbers
       strings = "NONE", -- Style that is applied to strings
-      comments = "italic", -- Style that is applied to comments
+      comments = "NONE", -- Style that is applied to comments
       keywords = "NONE", -- Style that is applied to keywords
       constants = "NONE", -- Style that is applied to constants
       functions = "NONE", -- Style that is applied to functions
