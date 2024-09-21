@@ -148,9 +148,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin-mocha",
       -- colorscheme = "moonfly",
-      colorscheme = "onedark_vivid",
+      -- colorscheme = "onedark_vivid",
     },
   },
 }
