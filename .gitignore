@@ -2,10 +2,13 @@
 fish/
 iterm2/
 raycast/
-karabiner/
 
 # Mac-OS files
 .DS_Store
 
 # Ignore lazy-lock (shows the plugin's branch and commit)
 nvim/lazy-lock.json
+
+# Ignore karabiner/automatic_backups directory
+karabiner/automatic_backups
+!karabiner/
