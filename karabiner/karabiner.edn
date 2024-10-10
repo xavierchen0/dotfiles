@@ -40,21 +40,21 @@
                 ]
          }
 
-        ; {:des "d-mode for arithmetic"    ;;    < > #    + - =    * / %
-        ;  :rules [:d-mode
-        ;           [:##u     :!Scomma]               ; d -> o        <
-        ;           [:##i    :!Speriod]               ; d -> p        >
-        ;           [:##o         :!S3]               ; d -> o        #
-        ;
-        ;           [:##j         :!Sequal_sign]      ; d -> j        +
-        ;           [:##k         :hyphen]            ; d -> k        -
-        ;           [:##l         :equal_sign]        ; d -> l        =
-        ;
-        ;           [:##m :!S8]                       ; d -> m        *
-        ;           [:##comma :slash]                 ; d -> ,        /
-        ;           [:##period :!S5]                  ; d -> .        %
-        ;         ]
-        ;  }
+        {:des "d-mode for arithmetic"    ;;    < > #    + - =    * / %
+         :rules [:d-mode
+                  [:##u     :!Scomma]               ; d -> o        <
+                  [:##i    :!Speriod]               ; d -> p        >
+                  [:##o         :!S3]               ; d -> o        #
+
+                  [:##j         :!Sequal_sign]      ; d -> j        +
+                  [:##k         :hyphen]            ; d -> k        -
+                  [:##l         :equal_sign]        ; d -> l        =
+
+                  [:##m :!S8]                       ; d -> m        *
+                  [:##comma :slash]                 ; d -> ,        /
+                  [:##period :!S5]                  ; d -> .        %
+                ]
+         }
 
         ; {:des "s-mode for punctuation"   ;;    ' " `    , . &    ; : ~
         ;  :rules [:s-mode
@@ -132,25 +132,25 @@
         ;         ]
         ;  }
 
-        ; {:des "v-mode for number pad"
-        ;  :rules [:v-mode
-        ;          [:u :7]
-        ;          [:i :8]
-        ;          [:o :9]
-        ;          [:j :4]
-        ;          [:k :5]
-        ;          [:l :6]
-        ;          [:m :1]
-        ;          [:comma :2]
-        ;          [:period :3]
-        ;          [:p :!Sequal_sign]
-        ;          [:semicolon :hyphen]
-        ;          [:slash :return_or_enter]
-        ;          [:y :delete_or_backspace]
-        ;          [:h :period]
-        ;          [:n :0]
-        ;         ]
-        ; }
+        {:des "v-mode for number pad"
+         :rules [:v-mode
+                 [:u :7]
+                 [:i :8]
+                 [:o :9]
+                 [:j :4]
+                 [:k :5]
+                 [:l :6]
+                 [:m :1]
+                 [:comma :2]
+                 [:period :3]
+                 [:p :!Sequal_sign]
+                 [:semicolon :hyphen]
+                 [:slash :return_or_enter]
+                 [:y :delete_or_backspace]
+                 [:h :period]
+                 [:n :0]
+                ]
+        }
 
         {:des "c-mode for remaining symbols ^ | \\ _ @"
          :rules [:c-mode
