@@ -198,7 +198,6 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-# TODO: Move irregularly used app to workspace 1
 # Move specific apps to workspaces on launching app
 [[on-window-detected]]
 if.app-name-regex-substring = 'iTerm2'
@@ -221,7 +220,7 @@ if.app-name-regex-substring = 'Focumon'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'zoom.us'
+if.app-name-regex-substring = 'zoom.us|Bitwarden'
 run = 'move-node-to-workspace Z'
 
 [[on-window-detected]]
@@ -236,11 +235,15 @@ run = 'move-node-to-workspace C'
 if.app-name-regex-substring = 'Chrome'
 run = 'move-node-to-workspace B'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'ChatGPT'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-name-regex-substring = '^(?!.*(iTerm2|Preview|Outlook|Calendar|Focumon|zoom\.us|Bitwarden|Spotify|Telegram|Chrome|ChatGPT)).*$'
+run = 'move-node-to-workspace 1'
+
 #TODO: Implement center, move and resize floating window (https://github.com/nikitabobko/AeroSpace/discussions/633#discussioncomment-11066479)
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Bitwarden'
-run = 'layout floating'
+run = 'layout tiling'
