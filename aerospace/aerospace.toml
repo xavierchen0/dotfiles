@@ -241,7 +241,7 @@ run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
 if.app-name-regex-substring = '^(?!.*(iTerm2|Preview|Outlook|Calendar|Focumon|zoom\.us|Bitwarden|Spotify|Telegram|Chrome|ChatGPT)).*$'
-run = 'move-node-to-workspace 1'
+run = ['move-node-to-workspace 1', 'layout accordion']
 
 #TODO: Implement center, move and resize floating window (https://github.com/nikitabobko/AeroSpace/discussions/633#discussioncomment-11066479)
 [[on-window-detected]]
