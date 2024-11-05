@@ -239,10 +239,6 @@ run = 'move-node-to-workspace B'
 if.app-name-regex-substring = 'ChatGPT'
 run = 'move-node-to-workspace A'
 
-[[on-window-detected]]
-if.app-name-regex-substring = '^(?!.*(iTerm2|Preview|Outlook|Calendar|Focumon|zoom\.us|Bitwarden|Spotify|Telegram|Chrome|ChatGPT)).*$'
-run = 'move-node-to-workspace 1'
-
 #TODO: Implement center, move and resize floating window (https://github.com/nikitabobko/AeroSpace/discussions/633#discussioncomment-11066479)
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
