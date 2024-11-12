@@ -136,11 +136,15 @@ return {
     },
   },
 
+  -- Add rose-pine colorscheme
+  { "rose-pine/neovim", name = "rose-pine" },
+
   -- Configure LazyVim to load default colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "rose-pine",
+      -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "moonfly",
       -- colorscheme = "onedark_vivid",
     },
