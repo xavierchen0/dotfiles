@@ -12,3 +12,6 @@ nvim/lazy-lock.json
 # Ignore karabiner/automatic_backups directory
 karabiner/automatic_backups
 !karabiner/
+
+# Ignore oh-my-zsh directory
+oh-my-zsh/
