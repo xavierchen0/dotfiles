@@ -1,5 +1,15 @@
 # dotfiles
 My personal configuration files
 
-Configs in here:
+### Coding
 - Neovim
+- Tmux
+- Wezterm
+- Lazygit
+- Zsh
+
+### Productivity
+- Yazi
+- Aerospace
+- Karabiner
+- Neofetch
