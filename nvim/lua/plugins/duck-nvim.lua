@@ -6,7 +6,7 @@ return {
 
   config = function()
     vim.api.nvim_create_user_command("DuckHatch", function()
-      require("duck").hatch()
+      require("duck").hatch("🦆", 100)
     end, {})
     vim.api.nvim_create_user_command("DuckCook", function()
       require("duck").cook()
