@@ -9,7 +9,7 @@ return {
       ["<S-Tab>"] = { "snippet_backward", "fallback" },
     },
 
-    signature = { enabled = true },
+    -- signature = { enabled = true },
 
     completion = { ghost_text = { enabled = false } },
   },
