@@ -3521,7 +3521,7 @@
                             "to": [{ "key_code": "escape" }]
                         },
                         {
-                            "from": { "key_code": "right_shift" },
+                            "from": { "key_code": "escape" },
                             "to": [{ "key_code": "caps_lock" }]
                         }
                     ]
@@ -3544,7 +3544,7 @@
                     "to": [{ "key_code": "escape" }]
                 },
                 {
-                    "from": { "key_code": "right_shift" },
+                    "from": { "key_code": "escape" },
                     "to": [{ "key_code": "caps_lock" }]
                 }
             ],
