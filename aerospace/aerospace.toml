@@ -254,6 +254,10 @@ if.app-name-regex-substring = 'ChatGPT'
 run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Deepseek'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Obsidian'
 run = 'move-node-to-workspace N'
 
