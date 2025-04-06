@@ -12,6 +12,7 @@
     "lazyvim.plugins.extras.lang.tex",
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.ui.smear-cursor",
+    "lazyvim.plugins.extras.ui.treesitter-context"
   ],
   "news": {
     "NEWS.md": "10960"
