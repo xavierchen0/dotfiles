@@ -14,7 +14,7 @@ after-login-command = []
 #   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
 # ]
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff80ef80 inactive_color=0xff494d64 width=10.0'
+  'exec-and-forget borders active_color=0xff80ef80 inactive_color=0xff494d64 width=10.0',
 ]
 
 
@@ -47,8 +47,12 @@ key-mapping.preset = 'qwerty'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center'] # Mouse lazily follows focused monitor (default in i3)
-on-focus-changed = ['move-mouse window-lazy-center'] # Mouse lazily follows any focus (window or workspace)
+on-focused-monitor-changed = [
+  'move-mouse monitor-lazy-center',
+] # Mouse lazily follows focused monitor (default in i3)
+on-focus-changed = [
+  'move-mouse window-lazy-center',
+] # Mouse lazily follows any focus (window or workspace)
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -59,11 +63,11 @@ on-focus-changed = ['move-mouse window-lazy-center'] # Mouse lazily follows any 
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 20
-inner.vertical =   20
-outer.left =       20
-outer.bottom =     20
-outer.top =        20
-outer.right =      20
+inner.vertical = 20
+outer.left = 20
+outer.bottom = 20
+outer.top = 20
+outer.right = 20
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -194,7 +198,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
@@ -254,7 +261,6 @@ run = 'move-node-to-workspace N'
 if.app-name-regex-substring = 'Anki'
 run = 'move-node-to-workspace Q'
 
-#TODO: Implement center, move and resize floating window (https://github.com/nikitabobko/AeroSpace/discussions/633#discussioncomment-11066479)
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
 run = 'layout tiling'
