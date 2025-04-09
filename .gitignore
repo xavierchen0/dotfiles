@@ -21,3 +21,6 @@ thefuck/
 
 # Ignore qBittorrent
 qBittorrent/
+
+# Ignore github copilot
+github-copilot/
