@@ -84,6 +84,7 @@ plugins=(
   alias-finder
   colored-man-pages
   gitignore
+  conda-zsh-completion
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -194,3 +195,9 @@ function rmvenv() {
       rm -r $VENV_HOME/$1
   fi
 }
+
+# conda-zsh-completion
+autoload -U compinit && compinit
+zstyle ':completion::complete:*' use-cache 1
+zstyle ":conda_zsh_completion:*" use-groups true
+zstyle ":conda_zsh_completion:*" show-unnamed true
