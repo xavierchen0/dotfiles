@@ -136,8 +136,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# for thefuck plugin
-eval $(thefuck --alias)
 
 # for zsh-syntax-highlighting plugin
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
