@@ -43,8 +43,8 @@ return {
       ]],
       -- nodes
       {
-        name = i(1),
-        content = i(2),
+        name = i(1, "name"),
+        content = i(2, "content"),
       }
     )
   ),
@@ -64,7 +64,7 @@ return {
       ]],
       -- nodes
       {
-        content = i(1),
+        content = i(1, "content"),
       }
     )
   ),
@@ -86,9 +86,9 @@ return {
       ]],
       -- nodes
       {
-        iteratorVar = i(1),
-        iterable = i(2),
-        content = i(3),
+        iteratorVar = i(1, "interatorVar"),
+        iterable = i(2, "iterable"),
+        content = i(3, "content"),
       }
     )
   ),
@@ -113,9 +113,9 @@ return {
       ]],
         -- nodes
         {
-          conditional = i(1),
-          ifBlock = i(2),
-          elseBlock = i(3),
+          conditional = i(1, "conditional"),
+          ifBlock = i(2, "ifBlock"),
+          elseBlock = i(3, "elseBlock"),
         }
       ),
       fmta(
@@ -131,11 +131,11 @@ return {
       ]],
         -- nodes
         {
-          conditional1 = i(1),
-          ifBlock = i(2),
-          conditional2 = i(3),
-          elifBlock = i(4),
-          elseBlock = i(5),
+          conditional1 = i(1, "conditional1"),
+          ifBlock = i(2, "ifBlock"),
+          conditional2 = i(3, "conditional2"),
+          elifBlock = i(4, "elifBlock"),
+          elseBlock = i(5, "elseBlock"),
         }
       ),
     })
