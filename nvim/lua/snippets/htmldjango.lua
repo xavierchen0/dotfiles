@@ -140,4 +140,24 @@ return {
       ),
     })
   ),
+
+  s(
+    -- context
+    {
+      trig = "jjx",
+      name = "Jinja extend",
+      desc = "Jinja extend",
+    },
+    -- nodes
+    fmta(
+      -- string
+      [[
+      {% extends <name> %}
+      ]],
+      -- nodes
+      {
+        name = i(1, "name"),
+      }
+    )
+  ),
 }
