@@ -246,7 +246,7 @@ if.app-name-regex-substring = 'Telegram'
 run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Chrome'
+if.app-name-regex-substring = 'Chrome|Firefox'
 run = 'move-node-to-workspace B'
 
 [[on-window-detected]]
