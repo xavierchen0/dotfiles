@@ -215,7 +215,7 @@ alt-shift-l = ['join-with right', 'mode main']
 # Move specific apps to workspaces on launching app
 [[on-window-detected]]
 if.app-name-regex-substring = 'Wez'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace T'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Preview'
