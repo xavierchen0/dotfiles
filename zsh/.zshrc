@@ -202,3 +202,6 @@ zstyle ":conda_zsh_completion:*" show-unnamed true
 
 # rust and cargo
 . "$HOME/.cargo/env"
+
+# postgresql
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
