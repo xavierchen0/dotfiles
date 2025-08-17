@@ -100,3 +100,9 @@ vim.o.smoothscroll = true
 
 -- Enable statusline
 vim.o.laststatus = 2
+
+-- Enable rounded floating windows
+vim.o.winborder = 'rounded'
+
+-- Enables vibrant colors
+vim.o.termguicolors = true
