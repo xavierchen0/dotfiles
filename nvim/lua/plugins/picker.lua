@@ -89,7 +89,7 @@ return {
       desc = 'Grep Open Buffers',
     },
     {
-      '<leader>fG',
+      '<leader>fgg',
       function()
         Snacks.picker.grep()
       end,
