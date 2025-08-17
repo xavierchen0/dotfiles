@@ -7,6 +7,14 @@ return {
       ['<C-v>'] = { 'actions.select', opts = { vertical = true } },
     },
   },
+  keys = {
+    {
+      '<leader>o',
+      mode = { 'n', 'x', 'o' },
+      '<CMD>Oil<CR>',
+      desc = 'Open Oil',
+    },
+  },
   -- Optional dependencies
   dependencies = { { 'echasnovski/mini.icons', opts = {} } },
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
