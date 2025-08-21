@@ -84,7 +84,6 @@ plugins=(
   alias-finder
   colored-man-pages
   gitignore
-  conda-zsh-completion
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,22 +119,6 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 # for zsh-syntax-highlighting plugin
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -194,12 +177,6 @@ function rmvenv() {
   fi
 }
 
-# conda-zsh-completion
-autoload -U compinit && compinit
-zstyle ':completion::complete:*' use-cache 1
-zstyle ":conda_zsh_completion:*" use-groups true
-zstyle ":conda_zsh_completion:*" show-unnamed true
-
 # rust and cargo
 . "$HOME/.cargo/env"
 
@@ -209,3 +186,5 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export NVM_DIR="$HOME/.config//nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.local/bin/env"
