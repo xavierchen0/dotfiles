@@ -76,6 +76,7 @@ return {
         { '<leader>dw', group = 'Debug UI Widgets' },
         { '<leader>m', group = 'Custom Global marks' },
         { '<leader>g', group = 'Lazygit' },
+        { '<leader>j', group = 'Jupynium' },
       },
     },
   },
