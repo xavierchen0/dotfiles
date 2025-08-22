@@ -188,3 +188,6 @@ export NVM_DIR="$HOME/.config//nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . "$HOME/.local/bin/env"
+
+# Put python 3.9 into $PATH
+export PATH="/Users/xavier/Library/Python/3.9/bin:$PATH"
