@@ -191,3 +191,9 @@ export NVM_DIR="$HOME/.config//nvm"
 
 # Put python 3.9 into $PATH
 export PATH="/Users/xavier/Library/Python/3.9/bin:$PATH"
+
+# Add vim keybindings
+bindkey -v
+
+# Add back CTRL-R which is removed due to vim keybindings
+bindkey ^R history-incremental-search-backward
