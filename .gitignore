@@ -24,3 +24,6 @@ qBittorrent/
 
 # Ignore github copilot
 github-copilot/
+
+# ignore github cli
+gh/
