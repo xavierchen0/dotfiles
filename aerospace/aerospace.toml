@@ -215,7 +215,7 @@ cmd-alt-ctrl-shift-l = ['join-with right', 'mode main']
 # Move specific apps to workspaces on launching app
 [[on-window-detected]]
 if.app-name-regex-substring = 'Wez'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace Q'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Preview'
@@ -271,7 +271,7 @@ run = 'move-node-to-workspace N'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Anki'
-run = 'move-node-to-workspace Q'
+run = 'move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
