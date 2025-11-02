@@ -1,6 +1,7 @@
 require 'options'
 require 'keymaps'
 require 'autocmds'
+require 'args_harpoon'
 
 require 'lazy-bootstrap'
 

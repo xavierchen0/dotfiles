@@ -71,7 +71,7 @@ return {
         { '<leader>u', group = 'UI' },
         { '<leader>d', group = 'Debug' },
         { '<leader>dw', group = 'Debug UI Widgets' },
-        { '<leader>m', group = 'Custom Global marks' },
+        { '<leader>m', group = 'Args Harpoon' },
         { '<leader>g', group = 'Lazygit' },
         { '<leader>j', group = 'Jupynium' },
       },
