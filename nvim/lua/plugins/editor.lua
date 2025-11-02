@@ -4,9 +4,6 @@ return {
   -- Detect tabstop and shiftwidth automatically
   { 'NMAC427/guess-indent.nvim', opts = {} },
 
-  -- Visually see indented code blocks
-  { 'echasnovski/mini.indentscope', version = '*', opts = {} },
-
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
