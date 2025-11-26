@@ -254,15 +254,7 @@ if.app-name-regex-substring = 'Chrome|Firefox'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'ChatGPT'
-run = 'move-node-to-workspace A'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Claude'
-run = 'move-node-to-workspace A'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Deepseek'
+if.app-name-regex-substring = 'ChatGPT|Claude|Gemini|Deepseek'
 run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
