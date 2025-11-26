@@ -15,7 +15,7 @@ config.color_scheme = "rose-pine"
 
 -- Font
 config.font = wezterm.font("JetBrains Mono")
-config.font_size = 13.0
+config.font_size = 12.0
 -- disable ligatures
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.font_rules = {
