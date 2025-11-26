@@ -1,0 +1,77 @@
+[language_servers.pylsp]
+enabled = false
+enable_mypy = true
+enable_pydocstyle = false
+enable_ruff = true
+enable_pyflakes = false
+enable_flake8 = false
+enable_pylint = false
+
+[package_management]
+manager = "uv"
+
+[diagnostics]
+sql_linter = true
+
+[formatting]
+line_length = 79
+
+[snippets]
+include_default_snippets = true
+custom_paths = []
+
+[display]
+default_width = "medium"
+default_table_page_size = 10
+default_table_max_columns = 50
+cell_output = "below"
+dataframes = "rich"
+theme = "light"
+reference_highlighting = false
+code_editor_font_size = 14
+
+[ai]
+rules = ""
+inline_tooltip = false
+mode = "manual"
+
+[ai.models]
+displayed_models = []
+custom_models = []
+
+[keymap]
+preset = "default"
+destructive_delete = true
+
+[keymap.overrides]
+
+[server]
+follow_symlink = false
+browser = "default"
+
+[experimental]
+
+[completion]
+activate_on_typing = true
+copilot = false
+
+[save]
+autosave = "after_delay"
+format_on_save = false
+autosave_delay = 1000
+
+[mcp]
+presets = []
+
+[mcp.mcpServers]
+
+[runtime]
+output_max_bytes = 8000000
+watcher_on_save = "lazy"
+std_stream_max_bytes = 1000000
+auto_instantiate = false
+on_cell_change = "autorun"
+default_sql_output = "auto"
+default_auto_download = []
+reactive_tests = true
+auto_reload = "off"
