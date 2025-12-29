@@ -1,0 +1,4 @@
+# Ignore automatic backups from karabiner
+# Karabiner performs automatic backup which are useful at times, but i don't want to constantly
+# keep committing these changes.
+karabiner/automatic_backups/
