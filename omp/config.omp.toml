@@ -4,7 +4,7 @@ final_space = true
 [upgrade]
   source = 'cdn'
   interval = '24h'
-  auto = true
+  auto = false
   notice = true
 
 # LEFT: Path + Git
