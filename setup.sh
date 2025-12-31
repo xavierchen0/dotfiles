@@ -53,4 +53,5 @@ printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Installing vi
 printf "%s%b%-8s%b%s %s\n" "[  " "${BLUE}" "WORKING" "${NC}" " ]" "Creating symlinks" 
 ln -sf "${XDG_CONFIG_HOME}/zsh/.zshrc" "${HOME}/.zshrc"         # zshrc
 ln -sf "${XDG_CONFIG_HOME}/git/.gitconfig" "${HOME}/.gitconfig" # gitconfig
+ln -sf "${HOME}/Library/Mobile Documents/com~apple~CloudDocs" "${HOME}/iCloud"
 printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Creating symlinks" 
