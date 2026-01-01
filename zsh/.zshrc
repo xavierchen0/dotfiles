@@ -44,8 +44,4 @@ function y() {
 }
 
 # -- eza completion --
-echo 'export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"' >> ~/.zshrc
-export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
-export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
-export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
 export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
