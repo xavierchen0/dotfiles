@@ -40,3 +40,4 @@ cask "alt-tab"                             # Better Alt-Tab; Window Specific rat
 cask "microsoft-outlook"                   # Email client
 cask "bitwarden"                           # Password manager
 cask "shottr"                              # Better screenshot tool
+cask "mactex-no-gui"                       # Latex for Mac without GUI applications
