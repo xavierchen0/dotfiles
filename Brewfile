@@ -5,7 +5,7 @@ tap "nikitabobko/tap"                      # Tap for Tiling manager
 
 # -- CLI tools --
 brew "git"                                 # git init
-brew "nvim"                                # Best editor
+brew "neovim", args: ["head"]              # Best editor
 brew "borders"                             # Coloured window borders
 brew "oh-my-posh"                          # Shell Prompt
 brew "lazygit"                             # Git GUI
