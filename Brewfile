@@ -41,3 +41,4 @@ cask "microsoft-outlook"                   # Email client
 cask "bitwarden"                           # Password manager
 cask "shottr"                              # Better screenshot tool
 cask "mactex-no-gui"                       # Latex for Mac without GUI applications
+cask "microsoft-excel"                     # Microsoft Excel -_-
