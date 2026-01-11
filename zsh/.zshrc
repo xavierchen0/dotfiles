@@ -17,6 +17,7 @@ function cfg() {
 
 # -- Custom aliases --
 alias ls="eza --color=always --icons=always"
+alias bb="brew bundle --verbose"
 
 # -- zsh keybinds --
 bindkey -e # use emacs keybind so i can CTRL-A/CTRL-E
