@@ -44,3 +44,6 @@ cask "mactex-no-gui"                       # Latex for Mac without GUI applicati
 cask "microsoft-excel"                     # Microsoft Excel -_-
 cask "microsoft-word"                      # Microsoft Word -_-
 cask "zoom"                                # Zoom
+
+# -- LSPs
+brew "lua-language-server"                 # Lua language server
