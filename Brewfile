@@ -48,6 +48,7 @@ cask "zoom"                                # Zoom
 
 # -- LSPs --
 brew "lua-language-server"                 # Lua language server
+brew "marksman"                            # Markdown language server
 
 # -- Formatters --
 brew "stylua"                              # Lua formatter
