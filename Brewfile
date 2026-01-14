@@ -52,3 +52,6 @@ brew "marksman"                            # Markdown language server
 
 # -- Formatters --
 brew "stylua"                              # Lua formatter
+
+# -- Linters --
+brew "markdownlint-cli2"                   # Markdown linter
