@@ -14,3 +14,10 @@ _G.Config.new_autocmd = function(event, pattern, callback, desc)
   local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
   vim.api.nvim_create_autocmd(event, opts)
 end
+
+-- Load configs
+require('config.00_colorscheme')
+require('config.10_options')
+require('config.20_autocmds')
+require('config.30_keymaps')
+require('config.40_commands')
