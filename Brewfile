@@ -43,6 +43,7 @@ cask "shottr"                              # Better screenshot tool
 cask "mactex-no-gui"                       # Latex for Mac without GUI applications
 cask "microsoft-excel"                     # Microsoft Excel -_-
 cask "microsoft-word"                      # Microsoft Word -_-
+cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
 cask "zoom"                                # Zoom
 
 # -- LSPs
