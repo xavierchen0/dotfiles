@@ -16,8 +16,8 @@ _G.Config.new_autocmd = function(event, pattern, callback, desc)
 end
 
 -- Load configs
-require('config.00_colorscheme')
-require('config.10_options')
-require('config.20_autocmds')
-require('config.30_keymaps')
-require('config.40_commands')
+require('00_colorscheme')
+require('10_options')
+require('20_autocmds')
+require('30_keymaps')
+require('40_commands')
