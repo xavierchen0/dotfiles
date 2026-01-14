@@ -46,5 +46,8 @@ cask "microsoft-word"                      # Microsoft Word -_-
 cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
 cask "zoom"                                # Zoom
 
-# -- LSPs
+# -- LSPs --
 brew "lua-language-server"                 # Lua language server
+
+# -- Formatters --
+brew "stylua"                              # Lua formatter
