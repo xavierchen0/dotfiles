@@ -1,4 +1,4 @@
 -- Command to update all plugins
-vim.api.nvim_create_user_command('PackUpdate', function()
-  vim.pack.update()
-end, { desc = 'Update all packages' })
+vim.api.nvim_create_user_command("PackUpdate", function()
+	vim.pack.update()
+end, { desc = "Update all packages" })

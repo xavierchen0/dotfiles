@@ -9,15 +9,15 @@ _G.Config = {}
 -- - `:h autocommand`
 -- - `:h nvim_create_augroup()`
 -- - `:h nvim_create_autocmd()`
-local gr = vim.api.nvim_create_augroup('custom-config', {})
+local gr = vim.api.nvim_create_augroup("custom-config", {})
 _G.Config.new_autocmd = function(event, pattern, callback, desc)
-  local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
-  vim.api.nvim_create_autocmd(event, opts)
+	local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
+	vim.api.nvim_create_autocmd(event, opts)
 end
 
 -- Load configs
-require('00_colorscheme')
-require('10_options')
-require('20_autocmds')
-require('30_keymaps')
-require('40_commands')
+require("00_colorscheme")
+require("10_options")
+require("20_autocmds")
+require("30_keymaps")
+require("40_commands")
