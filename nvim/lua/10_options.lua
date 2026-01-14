@@ -14,7 +14,7 @@ vim.o.confirm = true -- Provide confirm message
 -- Enable all filetype plugins and syntax (if not enabled, for better startup)
 vim.cmd("filetype plugin indent on")
 if vim.fn.exists("syntax_on") ~= 1 then
-    vim.cmd("syntax enable")
+  vim.cmd("syntax enable")
 end
 
 -- Sync with computer's clipboard

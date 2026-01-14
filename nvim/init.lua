@@ -11,8 +11,8 @@ _G.Config = {}
 -- - `:h nvim_create_autocmd()`
 local gr = vim.api.nvim_create_augroup("custom-config", {})
 _G.Config.new_autocmd = function(event, pattern, callback, desc)
-    local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
-    vim.api.nvim_create_autocmd(event, opts)
+  local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
+  vim.api.nvim_create_autocmd(event, opts)
 end
 
 -- Load configs
