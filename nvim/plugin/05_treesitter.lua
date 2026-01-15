@@ -13,7 +13,7 @@ end
 -- If hooks need to run on install, run this before `vim.pack.add()`
 vim.api.nvim_create_autocmd('PackChanged', { callback = hooks })
 
-require('nvim-treesitter').install({ 'lua', 'markdown', 'markdown_inline' })
+require('nvim-treesitter').install({ 'lua', 'markdown', 'markdown_inline', 'python' })
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'lua', 'markdown' },
