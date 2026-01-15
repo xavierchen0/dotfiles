@@ -22,6 +22,7 @@ brew "imagemagick"                         # Font, HEIC, and JPEG XL preview SVG
 brew "yazi"                                # Terminal file manager
 brew "eza"                                 # Better ls
 brew "television"                          # Fuzzy finder like ls
+brew "tree-sitter-cli"                      # Treesitter-cli
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                  # Keyboard macros and mapping
