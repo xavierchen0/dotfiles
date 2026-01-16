@@ -48,6 +48,7 @@ cask "microsoft-excel"                     # Microsoft Excel -_-
 cask "microsoft-word"                      # Microsoft Word -_-
 cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
 cask "zoom"                                # Zoom
+cask "sioyek"                              # PDF Reader with vim-like keybinds
 
 # -- LSPs --
 brew "lua-language-server"                 # Lua language server
