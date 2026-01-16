@@ -139,9 +139,9 @@ enter = "confirm_selection"
 
 # Preview panel control
 # --------------------
-pagedown = "scroll_preview_half_page_down"
-pageup = "scroll_preview_half_page_up"
-ctrl-f = "cycle_previews"
+ctrl-f = "scroll_preview_half_page_down"
+ctrl-b = "scroll_preview_half_page_up"
+# ctrl-f = "cycle_previews"
 
 # Data operations
 # --------------
