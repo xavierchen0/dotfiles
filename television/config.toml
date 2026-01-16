@@ -147,7 +147,7 @@ ctrl-b = "scroll_preview_half_page_up"
 # --------------
 ctrl-y = "copy_entry_to_clipboard"
 ctrl-r = "reload_source"
-ctrl-s = "cycle_sources"
+tab = "cycle_sources"
 
 # UI Features
 # ----------
