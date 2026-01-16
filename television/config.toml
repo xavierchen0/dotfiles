@@ -133,7 +133,7 @@ ctrl-down = "select_next_history"
 
 # Multi-selection
 # --------------
-tab = "toggle_selection_down"
+space = "toggle_selection_down"
 backtab = "toggle_selection_up"
 enter = "confirm_selection"
 
