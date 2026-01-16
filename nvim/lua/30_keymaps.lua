@@ -9,7 +9,11 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down half page and cent
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up half page and center" })
 
 -- Add diagnostic to location list
-vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "Send diagnostic to location list" })
+vim.keymap.set("n", "<leader>da", vim.diagnostic.setloclist, { desc = "Send all diagnostic to location list" })
+vim.keymap.set("n", "<leader>de", function()
+  vim.diagnostic.setloclist({ severity = { min = vim.diagnostic.severity.ERROR } })
+end, { desc = "Send only error diagnostic to location list" })
+
 -- Open diagnostic virtual lines in current line
 vim.keymap.set("n", "<leader>do", function()
   local toggle_vl = not vim.diagnostic.config().virtual_lines
