@@ -9,7 +9,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down half page and cent
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up half page and center" })
 
 -- Add diagnostic to location list
-vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "Send diagnostic to location list" })
 
 -- Toggle diagnostics
 vim.keymap.set('n', '<leader>d', function()
