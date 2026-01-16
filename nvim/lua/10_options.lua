@@ -14,7 +14,7 @@ vim.o.confirm = true                           -- Provide confirm message
 -- Enable all filetype plugins and syntax (if not enabled, for better startup)
 vim.cmd("filetype plugin indent on")
 if vim.fn.exists("syntax_on") ~= 1 then
-	vim.cmd("syntax enable")
+  vim.cmd("syntax enable")
 end
 
 -- Sync with computer's clipboard
@@ -44,9 +44,6 @@ vim.o.foldcolumn = "auto"   -- Indicate fold
 vim.o.foldmethod = "indent" -- Fold based on indent level
 vim.o.foldnestmax = 10      -- Limit number of fold levels
 vim.o.foldtext = ""         -- Show text under fold with its highlighting
-
--- Diagnostics
-vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
 -- Editing ====================================================================
 vim.o.autoindent = true        -- Use auto indent

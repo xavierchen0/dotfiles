@@ -10,6 +10,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up half page and center
 
 -- Add diagnostic to location list
 vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "Send diagnostic to location list" })
+-- Open diagnostic virtual lines in current line
+vim.keymap.set("n", "<leader>do", function()
+  local toggle_vl = not vim.diagnostic.config().virtual_lines
+  if toggle_vl then
+    vim.diagnostic.config({ virtual_lines = { current_line = true } })
+  else
+    vim.diagnostic.config({ virtual_lines = false })
+  end
+end, { desc = "Toggle diagnostic virtual lines for current line" })
 
 -- Toggle diagnostics
 vim.keymap.set('n', '<leader>d', function()
