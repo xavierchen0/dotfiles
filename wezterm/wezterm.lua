@@ -14,7 +14,7 @@ config.font_rules = {
     font = wezterm.font_with_fallback {
       family = 'JetBrains Mono',
       weight = 'ExtraBold'
-      }
+    }
   },
   {
     intensity = 'Bold',
@@ -23,7 +23,7 @@ config.font_rules = {
       family = 'JetBrains Mono',
       weight = 'ExtraBold',
       style = 'Italic',
-      }
+    }
   }
 }
 
@@ -58,7 +58,7 @@ config.max_fps = 240
 
 -- Keymaps
 config.keys = {
-	-- Split Horizontally
+  -- Split Horizontally
   {
     key = "_",
     mods = "LEADER|SHIFT",
@@ -67,7 +67,7 @@ config.keys = {
       size = { Percent = 50 }
     }
   },
-	-- Split Vertically
+  -- Split Vertically
   {
     key = "|",
     mods = "LEADER|SHIFT",
@@ -84,31 +84,31 @@ config.keys = {
       confirm = false
     }
   },
-	-- Navigate Panes Left
-	{
-		key = "h",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection "Left",
-	},
-	-- Navigate Panes Right
-	{
-		key = "l",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection "Right",
-	},
-	-- Navigate Panes Up
-	{
-		key = "j",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection "Down",
-	},
-	-- Navigate Panes Down
-	{
-		key = "k",
-		mods = "LEADER",
-		action = act.ActivatePaneDirection "Up",
-	},
-  -- Resize 
+  -- Navigate Panes Left
+  {
+    key = "h",
+    mods = "LEADER",
+    action = act.ActivatePaneDirection "Left",
+  },
+  -- Navigate Panes Right
+  {
+    key = "l",
+    mods = "LEADER",
+    action = act.ActivatePaneDirection "Right",
+  },
+  -- Navigate Panes Up
+  {
+    key = "j",
+    mods = "LEADER",
+    action = act.ActivatePaneDirection "Down",
+  },
+  -- Navigate Panes Down
+  {
+    key = "k",
+    mods = "LEADER",
+    action = act.ActivatePaneDirection "Up",
+  },
+  -- Resize
   {
     key = 'm',
     mods = 'LEADER',
@@ -117,13 +117,13 @@ config.keys = {
       one_shot = false
     }
   },
-	-- Swap Panes
+  -- Swap Panes
   {
     key = "M",
     mods = "LEADER|SHIFT",
-    action = act.PaneSelect { mode = "SwapWithActiveKeepFocus"}
+    action = act.PaneSelect { mode = "SwapWithActiveKeepFocus" }
   },
-	-- Toggle Pane Zoom
+  -- Toggle Pane Zoom
   {
     key = "z",
     mods = "LEADER",
@@ -132,19 +132,19 @@ config.keys = {
   -- Config workspace
   {
     key = "c",
-    mods = "LEADER", 
+    mods = "LEADER",
     action = act.SwitchToWorkspace { name = "config" }
   },
   -- Default workspace
   {
     key = "d",
-    mods = "LEADER", 
+    mods = "LEADER",
     action = act.SwitchToWorkspace { name = "default" }
   },
   -- Fuzzy find and activate workspaces
   {
     key = "w",
-    mods = "LEADER", 
+    mods = "LEADER",
     action = act.ShowLauncherArgs {
       flags = "FUZZY|WORKSPACES"
     },
@@ -174,19 +174,19 @@ config.keys = {
       end),
     },
   },
-	{
-		key = '$',
-		mods = 'LEADER|SHIFT',
-		action = act.PromptInputLine {
-			description = 'Enter new workspace name',
-			action = wezterm.action_callback(
-				function(window, pane, line)
-					if line then
-						wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
-					end
-				end
-			),
-		},
+  {
+    key = '$',
+    mods = 'LEADER|SHIFT',
+    action = act.PromptInputLine {
+      description = 'Enter new workspace name',
+      action = wezterm.action_callback(
+        function(window, pane, line)
+          if line then
+            wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
+          end
+        end
+      ),
+    },
   },
 }
 
@@ -198,10 +198,10 @@ config.key_tables = {
   -- 'resize_pane' here corresponds to the name="resize_pane" in
   -- the key assignments above.
   resize_pane = {
-    { key = 'h', action = act.AdjustPaneSize { 'Left', 10 } },
-    { key = 'l', action = act.AdjustPaneSize { 'Right', 10 } },
-    { key = 'k', action = act.AdjustPaneSize { 'Up', 10 } },
-    { key = 'j', action = act.AdjustPaneSize { 'Down', 10 } },
+    { key = 'h',      action = act.AdjustPaneSize { 'Left', 10 } },
+    { key = 'l',      action = act.AdjustPaneSize { 'Right', 10 } },
+    { key = 'k',      action = act.AdjustPaneSize { 'Up', 10 } },
+    { key = 'j',      action = act.AdjustPaneSize { 'Down', 10 } },
 
     -- Cancel the mode by pressing escape
     { key = 'Escape', action = 'PopKeyTable' },
@@ -233,7 +233,7 @@ wezterm.on("gui-startup", function(cmd)
 
   -- Set default workspace
   mux.set_active_workspace "default"
-  end 
+end
 )
 
 -- Show workspace name on the right of tab bar
