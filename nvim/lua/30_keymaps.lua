@@ -25,7 +25,7 @@ vim.keymap.set("n", "<leader>do", function()
 end, { desc = "Toggle diagnostic virtual lines for current line" })
 
 -- Toggle diagnostics
-vim.keymap.set('n', '<leader>d', function()
+vim.keymap.set('n', '<leader>dt', function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { desc = "Toggle diagnostics" })
 
