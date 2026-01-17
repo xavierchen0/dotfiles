@@ -132,17 +132,17 @@ config.keys = {
     mods = "LEADER",
     action = act.TogglePaneZoomState,
   },
-  -- Config workspace
-  {
-    key = "c",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace { name = "config" }
-  },
   -- Default workspace
   {
     key = "d",
     mods = "LEADER",
     action = act.SwitchToWorkspace { name = "default" }
+  },
+  -- Config workspace
+  {
+    key = "c",
+    mods = "LEADER",
+    action = act.SwitchToWorkspace { name = "config" }
   },
   -- Fuzzy find and activate workspaces
   {
