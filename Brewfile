@@ -25,6 +25,7 @@ brew "television"                          # Fuzzy finder like ls
 brew "tree-sitter-cli"                     # Treesitter-cli
 brew "bat"                                 # Colorful cat
 brew "tlrc"                                # Practical examples of CLI tools
+brew "gh"                                  # Github cli
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                  # Keyboard macros and mapping
