@@ -1,35 +1,48 @@
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
 local config = {}
 
+local function _merge_tables(table1, table2)
+  local result = {}
+  -- Insert first table
+  for _, v in ipairs(table1) do
+    table.insert(result, v)
+  end
+  -- Insert second table
+  for _, v in ipairs(table2) do
+    table.insert(result, v)
+  end
+  return result
+end
+
 -- Colorscheme
-config.color_scheme = 'Rosé Pine (Gogh)'
+config.color_scheme = "Rosé Pine (Gogh)"
 
 -- Font rules
 config.font_rules = {
   {
-    intensity = 'Bold',
+    intensity = "Bold",
     italic = false,
-    font = wezterm.font_with_fallback {
-      family = 'JetBrains Mono',
-      weight = 'ExtraBold'
-    }
+    font = wezterm.font_with_fallback({
+      family = "JetBrains Mono",
+      weight = "ExtraBold",
+    }),
   },
   {
-    intensity = 'Bold',
+    intensity = "Bold",
     italic = true,
-    font = wezterm.font_with_fallback {
-      family = 'JetBrains Mono',
-      weight = 'ExtraBold',
-      style = 'Italic',
-    }
-  }
+    font = wezterm.font_with_fallback({
+      family = "JetBrains Mono",
+      weight = "ExtraBold",
+      style = "Italic",
+    }),
+  },
 }
 
 -- Disable ligatures
 -- Doc: https://wezterm.org/config/font-shaping.html
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 -- My left option is a hyper-key w/o Shift
 -- Ensure that the right option does not send composed key as it might affect keymaps
@@ -41,7 +54,7 @@ config.send_composed_key_when_right_alt_is_pressed = false
 config.use_dead_keys = false
 
 -- Leader Key (similar to tmux)
-config.leader = { key = 's', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 1000 }
 
 -- Max fps
 config.max_fps = 240
@@ -65,66 +78,66 @@ config.keys = {
   {
     key = "_",
     mods = "LEADER|SHIFT",
-    action = act.SplitPane {
+    action = act.SplitPane({
       direction = "Down",
-      size = { Percent = 50 }
-    }
+      size = { Percent = 50 },
+    }),
   },
   -- Split Vertically
   {
     key = "|",
     mods = "LEADER|SHIFT",
-    action = act.SplitPane {
+    action = act.SplitPane({
       direction = "Right",
-      size = { Percent = 50 }
-    }
+      size = { Percent = 50 },
+    }),
   },
   -- Close Pane
   {
     key = "x",
     mods = "LEADER",
-    action = act.CloseCurrentPane {
-      confirm = false
-    }
+    action = act.CloseCurrentPane({
+      confirm = false,
+    }),
   },
   -- Navigate Panes Left
   {
     key = "h",
     mods = "LEADER",
-    action = act.ActivatePaneDirection "Left",
+    action = act.ActivatePaneDirection("Left"),
   },
   -- Navigate Panes Right
   {
     key = "l",
     mods = "LEADER",
-    action = act.ActivatePaneDirection "Right",
+    action = act.ActivatePaneDirection("Right"),
   },
   -- Navigate Panes Up
   {
     key = "j",
     mods = "LEADER",
-    action = act.ActivatePaneDirection "Down",
+    action = act.ActivatePaneDirection("Down"),
   },
   -- Navigate Panes Down
   {
     key = "k",
     mods = "LEADER",
-    action = act.ActivatePaneDirection "Up",
+    action = act.ActivatePaneDirection("Up"),
   },
   -- Resize
   {
-    key = 'm',
-    mods = 'LEADER',
-    action = act.ActivateKeyTable {
+    key = "m",
+    mods = "LEADER",
+    action = act.ActivateKeyTable({
       name = "resize_pane",
-      one_shot = false
-    }
+      one_shot = false,
+    }),
   },
   -- Swap Panes
   {
     key = "M",
     mods = "LEADER|SHIFT",
-    action = act.PaneSelect { mode = "SwapWithActiveKeepFocus" }
+    action = act.PaneSelect({ mode = "SwapWithActiveKeepFocus" }),
   },
   -- Toggle Pane Zoom
   {
@@ -136,60 +149,64 @@ config.keys = {
   {
     key = "d",
     mods = "LEADER",
-    action = act.SwitchToWorkspace { name = "default" }
+    action = act.SwitchToWorkspace({ name = "default" }),
   },
   -- Config workspace
   {
     key = "c",
     mods = "LEADER",
-    action = act.SwitchToWorkspace { name = "config" }
+    action = act.SwitchToWorkspace({ name = "config" }),
+  },
+  -- Ezpoon workspace
+  {
+    key = "e",
+    mods = "LEADER",
+    action = act.SwitchToWorkspace({ name = "ezpoon" }),
   },
   -- Fuzzy find and activate workspaces
   {
     key = "w",
     mods = "LEADER",
-    action = act.ShowLauncherArgs {
-      flags = "FUZZY|WORKSPACES"
-    },
+    action = act.ShowLauncherArgs({
+      flags = "FUZZY|WORKSPACES",
+    }),
   },
   -- Prompt workspace name and create new workspace
   {
     key = "W",
     mods = "LEADER",
-    action = act.PromptInputLine {
-      description = wezterm.format {
+    action = act.PromptInputLine({
+      description = wezterm.format({
         { Attribute = { Intensity = "Bold" } },
         { Foreground = { AnsiColor = "Fuchsia" } },
         { Text = "Enter name for new workspace" },
-      },
+      }),
       action = wezterm.action_callback(function(window, pane, line)
         -- line will be `nil` if they hit escape without entering anything
         -- An empty string if they just hit enter
         -- Or the actual line of text they wrote
         if line then
           window:perform_action(
-            act.SwitchToWorkspace {
+            act.SwitchToWorkspace({
               name = line,
-            },
+            }),
             pane
           )
         end
       end),
-    },
+    }),
   },
   {
-    key = '$',
-    mods = 'LEADER|SHIFT',
-    action = act.PromptInputLine {
-      description = 'Enter new workspace name',
-      action = wezterm.action_callback(
-        function(window, pane, line)
-          if line then
-            wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
-          end
+    key = "$",
+    mods = "LEADER|SHIFT",
+    action = act.PromptInputLine({
+      description = "Enter new workspace name",
+      action = wezterm.action_callback(function(window, pane, line)
+        if line then
+          wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
         end
-      ),
-    },
+      end),
+    }),
   },
 }
 
@@ -201,13 +218,13 @@ config.key_tables = {
   -- 'resize_pane' here corresponds to the name="resize_pane" in
   -- the key assignments above.
   resize_pane = {
-    { key = 'h',      action = act.AdjustPaneSize { 'Left', 10 } },
-    { key = 'l',      action = act.AdjustPaneSize { 'Right', 10 } },
-    { key = 'k',      action = act.AdjustPaneSize { 'Up', 10 } },
-    { key = 'j',      action = act.AdjustPaneSize { 'Down', 10 } },
+    { key = "h", action = act.AdjustPaneSize({ "Left", 10 }) },
+    { key = "l", action = act.AdjustPaneSize({ "Right", 10 }) },
+    { key = "k", action = act.AdjustPaneSize({ "Up", 10 }) },
+    { key = "j", action = act.AdjustPaneSize({ "Down", 10 }) },
 
     -- Cancel the mode by pressing escape
-    { key = 'Escape', action = 'PopKeyTable' },
+    { key = "Escape", action = "PopKeyTable" },
   },
 }
 
@@ -215,32 +232,49 @@ config.key_tables = {
 wezterm.on("gui-startup", function(cmd)
   -- allow `wezterm start -- something` to affect what we spawn
   -- in our initial window
+  -- args take precedence before running subsequently defined args
   local args = {}
   if cmd then
     args = cmd.args
   end
 
   -- Default workspace
-  local tab, pane, window = mux.spawn_window {
+  local tab, pane, window = mux.spawn_window({
     workspace = "default",
     cwd = wezterm.home_dir,
-    args = args
-  }
+    args = args,
+  })
 
   -- Config workspace
-  local tab, pane, window = mux.spawn_window {
+  local cfg_cwd = wezterm.home_dir .. "/.config"
+  local cfg_tab1, cfg_t1_pane1, cfg_window = mux.spawn_window({
     workspace = "config",
-    cwd = wezterm.home_dir .. "/.config",
-    args = args
-  }
+    cwd = cfg_cwd,
+    args = _merge_tables(args, { "zsh", "-lic", "lazygit;exec zsh" }),
+  })
+  cfg_tab1:set_title("git+files")
+  local cfg_t1_pane2 = cfg_t1_pane1:split({ direction = "Right" })
+  local cfg_tab2, cfg_t2_pane1, _ = cfg_window:spawn_tab({})
+  cfg_tab2:activate()
+
+  -- ezpoon workspace
+  local arg_cwd = wezterm.home_dir .. "/dev/ezpoon"
+  local arg_tab1, arg_t1_pane1, arg_window = mux.spawn_window({
+    workspace = "ezpoon",
+    cwd = arg_cwd,
+    args = _merge_tables(args, { "zsh", "-lic", "lazygit;exec zsh" }),
+  })
+  arg_tab1:set_title("git+files")
+  local arg_t1_pane2 = arg_t1_pane1:split({ direction = "Right" })
+  local arg_tab2, arg_t2_pane1, _ = arg_window:spawn_tab({})
+  arg_tab2:activate()
 
   -- Set default workspace
-  mux.set_active_workspace "default"
-end
-)
+  mux.set_active_workspace("default")
+end)
 
 -- Show workspace name on the right of tab bar
-wezterm.on('update-right-status', function(window, pane)
+wezterm.on("update-right-status", function(window, pane)
   window:set_right_status(window:active_workspace())
 end)
 
