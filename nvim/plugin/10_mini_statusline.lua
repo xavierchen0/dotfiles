@@ -2,6 +2,8 @@ vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.statusline" },
 })
 
+local MiniStatusline = require("mini.statusline")
+
 require("mini.statusline").setup({
   active = function()
     local mode, mode_hl = MiniStatusline.section_mode({ trunc_width = 120 })
