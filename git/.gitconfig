@@ -1,5 +1,8 @@
 # This is Git's per-user configuration file.
+[init]
+  defaultBranch = main
+
 [user]
 # Please adapt and uncomment the following lines:
-	name = Xavier Chen
-	email = xaviernehc@gmail.com
+  name = Xavier Chen
+  email = xaviernehc@gmail.com
