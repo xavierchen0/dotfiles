@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>de", function()
   vim.diagnostic.setloclist({ severity = { min = vim.diagnostic.severity.ERROR } })
 end, { desc = "Send only error diagnostic to location list" })
 
--- Open diagnostic virtual lines in current line
+-- Toggle diagnostic virtual lines in current line
 vim.keymap.set("n", "<leader>do", function()
   local toggle_vl = not vim.diagnostic.config().virtual_lines
   if toggle_vl then
@@ -25,9 +25,27 @@ vim.keymap.set("n", "<leader>do", function()
 end, { desc = "Toggle diagnostic virtual lines for current line" })
 
 -- Toggle diagnostics
-vim.keymap.set('n', '<leader>dt', function()
+vim.keymap.set("n", "<leader>dt", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { desc = "Toggle diagnostics" })
+
+-- Turn on error only diagnostic from LSP for the current buffer
+local show_all = true
+vim.keymap.set("n", "<leader>ds", function()
+  show_all = not show_all
+
+  if show_all then
+    vim.diagnostic.config({
+      underline = { severity = { min = vim.diagnostic.severity.HINT } },
+      signs = { severity = { min = vim.diagnostic.severity.HINT } },
+    })
+  else
+    vim.diagnostic.config({
+      underline = { severity = { min = vim.diagnostic.severity.ERROR } },
+      signs = { severity = { min = vim.diagnostic.severity.ERROR } },
+    })
+  end
+end, { desc = "Toggle Diagnostic Severity" })
 
 -- Better movement with j/k even with wrapped lines
 vim.keymap.set("n", "j", "gj", { desc = "Move down by visual line (not logical line)" })
