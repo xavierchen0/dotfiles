@@ -14,6 +14,10 @@
       "rev": "c2526f1cde528a66e086ab1668e996d162c75f4f",
       "src": "https://github.com/stevearc/conform.nvim"
     },
+    "ezpoon": {
+      "rev": "e1c0d5a97af50e96db7dae6b088d4f36eb93bd3c",
+      "src": "https://github.com/xavierchen0/ezpoon"
+    },
     "gitsigns.nvim": {
       "rev": "42d6aed4e94e0f0bbced16bbdcc42f57673bd75e",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
