@@ -1,20 +1,20 @@
 vim.pack.add({
-  { src = 'https://github.com/alexpasmantier/tv.nvim' }
+  { src = "https://github.com/alexpasmantier/tv.nvim" },
 })
 
-local h = require('tv').handlers
+local h = require("tv").handlers
 
-require('tv').setup({
+require("tv").setup({
   channels = {
     files = {
-      keybinding = "<leader>ff",
+      keybinding = "<leader><leader>",
       handlers = {
         ["<CR>"] = h.open_as_files,
         ["<C-q>"] = h.sent_to_quickfix,
         ["<C-s>"] = h.open_in_split,
         ["<C-v>"] = h.open_in_vsplit,
-        ["<C-y>"] = h.copy_to_clipboard
-      }
+        ["<C-y>"] = h.copy_to_clipboard,
+      },
     },
     text = {
       keybinding = "<leader>fg",
@@ -23,8 +23,8 @@ require('tv').setup({
         ["<C-q>"] = h.sent_to_quickfix,
         ["<C-s>"] = h.open_in_split,
         ["<C-v>"] = h.open_in_vsplit,
-        ["<C-y>"] = h.copy_to_clipboard
-      }
+        ["<C-y>"] = h.copy_to_clipboard,
+      },
     },
     env = {
       keybinding = "<leader>fe",
@@ -34,5 +34,5 @@ require('tv').setup({
         ["<C-y>"] = h.copy_to_clipboard,
       },
     },
-  }
+  },
 })

@@ -1,5 +1,5 @@
 vim.pack.add({
-  { src = 'https://github.com/brianhuster/live-preview.nvim' }
+  { src = "https://github.com/brianhuster/live-preview.nvim" },
 })
 
-require('livepreview.config').set()
+require("livepreview.config").set()
