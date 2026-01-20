@@ -157,12 +157,6 @@ config.keys = {
     mods = "LEADER",
     action = act.SwitchToWorkspace({ name = "config" }),
   },
-  -- Ezpoon workspace
-  {
-    key = "e",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace({ name = "ezpoon" }),
-  },
   -- Fuzzy find and activate workspaces
   {
     key = "w",
@@ -256,18 +250,6 @@ wezterm.on("gui-startup", function(cmd)
   local cfg_t1_pane2 = cfg_t1_pane1:split({ direction = "Right" })
   local cfg_tab2, cfg_t2_pane1, _ = cfg_window:spawn_tab({})
   cfg_tab2:activate()
-
-  -- ezpoon workspace
-  local arg_cwd = wezterm.home_dir .. "/dev/ezpoon"
-  local arg_tab1, arg_t1_pane1, arg_window = mux.spawn_window({
-    workspace = "ezpoon",
-    cwd = arg_cwd,
-    args = _merge_tables(args, { "zsh", "-lic", "lazygit;exec zsh" }),
-  })
-  arg_tab1:set_title("git+files")
-  local arg_t1_pane2 = arg_t1_pane1:split({ direction = "Right" })
-  local arg_tab2, arg_t2_pane1, _ = arg_window:spawn_tab({})
-  arg_tab2:activate()
 
   -- Set default workspace
   mux.set_active_workspace("default")
