@@ -64,10 +64,10 @@ on-focus-changed = [
 [gaps]
 inner.horizontal = 20
 inner.vertical = 20
-outer.left = 20
-outer.bottom = 20
-outer.top = 20
-outer.right = 20
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -218,7 +218,7 @@ if.app-name-regex-substring = 'Wez'
 run = 'move-node-to-workspace Q'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Preview'
+if.app-name-regex-substring = 'Preview|sioyek'
 run = 'move-node-to-workspace P'
 
 [[on-window-detected]]

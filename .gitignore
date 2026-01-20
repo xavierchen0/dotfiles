@@ -1,29 +1,8 @@
-# Directories I don't want to be tracked
-fish/
-iterm2/
+# Ignore automatic backups from karabiner
+# Karabiner performs automatic backup which are useful at times, but i don't want to constantly
+# keep committing these changes.
+karabiner/automatic_backups/
+
+# Ignore raycast extension
+# Not important enough to VCS
 raycast/
-
-# Mac-OS files
-.DS_Store
-
-# Ignore lazy-lock (shows the plugin's branch and commit)
-nvim/lazy-lock.json
-
-# Ignore karabiner/automatic_backups directory
-karabiner/automatic_backups
-!karabiner/
-
-# Ignore oh-my-zsh directory
-oh-my-zsh/
-
-# Ignore thefuck directory
-thefuck/
-
-# Ignore qBittorrent
-qBittorrent/
-
-# Ignore github copilot
-github-copilot/
-
-# ignore github cli
-gh/

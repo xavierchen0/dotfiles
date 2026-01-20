@@ -1,14 +1,23 @@
-require 'options'
-require 'keymaps'
-require 'autocmds'
-require 'args_harpoon'
+-- Define config table to be able to pass data between scripts
+_G.Config = {}
 
-require 'lazy-bootstrap'
+-- Define custom autocommand group and helper to create an autocommand.
+-- Autocommands are Neovim's way to define actions that are executed on events
+-- (like creating a buffer, setting an option, etc.).
+--
+-- See also:
+-- - `:h autocommand`
+-- - `:h nvim_create_augroup()`
+-- - `:h nvim_create_autocmd()`
+local gr = vim.api.nvim_create_augroup("custom-config", { clear = true })
+_G.Config.new_autocmd = function(event, pattern, callback, desc)
+  local opts = { group = gr, pattern = pattern, callback = callback, desc = desc }
+  vim.api.nvim_create_autocmd(event, opts)
+end
 
-require('lazy').setup {
-  spec = { import = 'plugins' },
-  change_detection = { notify = false },
-}
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- Load configs
+require("00_colorscheme")
+require("10_options")
+require("20_autocmds")
+require("30_keymaps")
+require("40_commands")

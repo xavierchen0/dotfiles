@@ -1,101 +1,66 @@
-tap "candid82/brew"
-tap "felixkratz/formulae"
-tap "homebrew/services"
-tap "jakehilborn/jakehilborn"
-tap "lihaoyun6/tap"
-tap "nikitabobko/tap"
-tap "yqrashawn/goku"
-brew "apache-spark"
-brew "c-ares"
-brew "bitwarden-cli"
-brew "brew-gem"
-brew "cmatrix"
-brew "cpanminus"
-brew "curl"
-brew "displayplacer"
-brew "eza"
-brew "fd"
-brew "ffmpeg"
-brew "fzf"
-brew "gcc"
-brew "geckodriver"
-brew "gem-colorls"
-brew "git"
-brew "git-delta"
-brew "icu4c@76"
-brew "imagemagick"
-brew "jq"
-brew "latexindent"
-brew "lazygit", link: false
-brew "lua"
-brew "luarocks"
-brew "neofetch"
-brew "neovim"
-brew "openjdk"
-brew "pipes-sh"
-brew "poppler"
-brew "postgresql@16", restart_service: :changed
-brew "resvg"
-brew "ripgrep"
-brew "scala"
-brew "sevenzip"
-brew "tlrc"
-brew "tmux"
-brew "tree"
-brew "uv"
-brew "yazi"
-brew "zoxide"
-brew "zsh-autocomplete"
-brew "zsh-syntax-highlighting"
-brew "felixkratz/formulae/borders"
-brew "yqrashawn/goku/goku"
-cask "aerospace"
-cask "alt-tab"
-cask "anki"
-cask "bitwarden"
-cask "coteditor"
-cask "discord"
-cask "displaylink"
-cask "firefox"
-cask "font-hack-nerd-font"
-cask "font-jetbrains-mono-nerd-font"
-cask "font-symbols-only-nerd-font"
-cask "homerow"
-cask "karabiner-elements"
-cask "microsoft-auto-update"
-cask "microsoft-outlook"
-cask "microsoft-teams"
-cask "mos"
-cask "notion"
-cask "obsidian"
-cask "onedrive"
-cask "protonvpn"
-cask "qbittorrent"
-cask "shottr"
-cask "sioyek"
-cask "smoothscroll"
-cask "spotify"
-cask "stats"
-cask "visual-studio-code"
-cask "vlc"
-cask "wezterm@nightly"
-cask "whatsapp"
-vscode "esbenp.prettier-vscode"
-vscode "goessner.mdmath"
-vscode "james-yu.latex-workshop"
-vscode "mathematic.vscode-latex"
-vscode "mechatroner.rainbow-csv"
-vscode "mhutchie.git-graph"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-python.vscode-python-envs"
-vscode "ms-toolsai.datawrangler"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "vscode-icons-team.vscode-icons"
-vscode "vscodevim.vim"
-vscode "yzhang.markdown-all-in-one"
+# -- Taps --
+tap "FelixKratz/formulae"                  # Tap for coloured window borders
+tap "jandedobbeleer/oh-my-posh"            # Tap for Shell prompt
+tap "nikitabobko/tap"                      # Tap for Tiling manager
+
+# -- CLI tools --
+brew "git"                                 # git init
+brew "neovim", args: ["head"]              # Best editor
+brew "borders"                             # Coloured window borders
+brew "oh-my-posh"                          # Shell Prompt
+brew "lazygit"                             # Git GUI
+brew "ffmpeg"                              # Video editing (yazi)
+brew "sevenzip"                            # Archive (yazi)
+brew "jq"                                  # JSON query (yazi)
+brew "poppler"                             # PDF render (yazi)
+brew "fd"                                  # File searching (yazi)
+brew "ripgrep"                             # File content searching (yazi)
+brew "fzf"                                 # Interactive Searching (yazi)
+brew "zoxide"                              # Smarter cd (yazi)
+brew "resvg"                               # SVG preview (yazi)
+brew "imagemagick"                         # Font, HEIC, and JPEG XL preview SVG preview (yazi)
+brew "yazi"                                # Terminal file manager
+brew "eza"                                 # Better ls
+brew "television"                          # Fuzzy finder like ls
+brew "tree-sitter-cli"                     # Treesitter-cli
+brew "bat"                                 # Colorful cat
+brew "tlrc"                                # Practical examples of CLI tools
+brew "gh"                                  # Github cli
+brew "git-delta"                           # Git colorful diff pager
+brew "fastfetch"                           # System information tool
+
+# -- Casks (GUI Apps) -- 
+cask "karabiner-elements"                  # Keyboard macros and mapping
+cask "displaylink"                         # Support multiple monitors on Macbook Pro
+cask "aerospace"                           # Tiling manager
+cask "firefox"                             # Browser
+cask "google-chrome"                       # Browser
+cask "wezterm"                             # Terminal
+cask "raycast"                             # Better spotlight
+cask "mos"                                 # Smooth mouse scrolling 
+cask "hiddenbar"                           # Hide statusbar icons
+cask "stats"                               # Computer statistic
+cask "whatsapp"                            # Chat app
+cask "telegram"                            # Chat app
+cask "alt-tab"                             # Better Alt-Tab; Window Specific rather than application
+cask "microsoft-outlook"                   # Email client
+cask "bitwarden"                           # Password manager
+cask "shottr"                              # Better screenshot tool
+cask "mactex-no-gui"                       # Latex for Mac without GUI applications
+cask "microsoft-excel"                     # Microsoft Excel -_-
+cask "microsoft-word"                      # Microsoft Word -_-
+cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
+cask "zoom"                                # Zoom
+cask "sioyek"                              # PDF Reader with vim-like keybinds
+cask "spotify"                             # Music
+
+# -- LSPs --
+brew "lua-language-server"                 # Lua language server
+brew "marksman"                            # Markdown language server
+
+# -- Formatters --
+brew "stylua"                              # Lua formatter
+brew "prettier"                            # Prettier formatter
+
+# -- Linters --
+brew "markdownlint-cli2"                   # Markdown linter

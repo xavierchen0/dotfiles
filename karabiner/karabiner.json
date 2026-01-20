@@ -4,7 +4,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Ctrl key -> hyper key without shift (⌘⌥⌃)",
+                        "description": "Left Option key -> hyper key without shift (⌘⌥⌃)",
                         "manipulators": [
                             {
                                 "from": {
