@@ -1,8 +1,8 @@
 vim.pack.add({
-  { src = "https://github.com/xavierchen0/ezpoon" },
+  { src = "https://github.com/xavierchen0/hooks.nvim" },
 })
 
-local ez = require("ezpoon")
+local h = require("hooks")
 -- stylua: ignore start
 local valid_keys = {
   "0", "1", "2", "3", "4", "5",
@@ -12,14 +12,14 @@ local prefix = "<leader>m"
 
 for _, key in ipairs(valid_keys) do
   vim.keymap.set("n", prefix .. key, function()
-    ez.jump(key)
-  end, { desc = "EZpoon: Jump to [" .. key .. "]" })
+    h.jump(key)
+  end, { desc = "Hooks: Jump to [" .. key .. "]" })
 
   vim.keymap.set("n", prefix .. "a" .. key, function()
-    ez.add(key)
-  end, { desc = "EZpoon: Add current file to [" .. key .. "]" })
+    h.add(key)
+  end, { desc = "Hooks: Add current file to [" .. key .. "]" })
 end
 
 vim.keymap.set("n", prefix .. "m", function()
-  ez.menu()
-end, { desc = "EZpoon: Open editable menu" })
+  h.menu()
+end, { desc = "Hooks: Open editable menu" })
