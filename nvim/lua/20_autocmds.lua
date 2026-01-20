@@ -58,3 +58,44 @@ f = function(event)
   end
 end
 _G.Config.new_autocmd("BufReadPost", nil, f, "Go to last edit location when opening a new buffer")
+
+local lsp_progress = {}
+f = function(event)
+  local value = event.data.params.value
+  local client_id = event.data.client_id
+  local token = event.data.params.token
+
+  if value.kind == "begin" then
+    local client = vim.lsp.get_client_by_id(client_id)
+    if not client then
+      return
+    end
+    if not lsp_progress[client_id] then
+      lsp_progress[client_id] = {}
+    end
+    local progress = {
+      kind = "progress",
+      status = "running",
+      percent = value.percentage,
+      title = string.format("LspProgress(%s[%d])", client.name, event.data.client_id),
+    }
+    lsp_progress[client_id][token] = progress
+    progress.id = vim.api.nvim_echo({ { value.title } }, false, progress)
+    return
+  end
+
+  local progress = lsp_progress[client_id][token]
+  if value.kind == "report" then
+    progress.percent = value.percentage
+    vim.api.nvim_echo({ { value.title } }, false, progress)
+  else
+    progress.percent = 100
+    progress.status = "success"
+    vim.api.nvim_echo({ { value.title } }, true, progress)
+    lsp_progress[client_id][token] = nil
+    if not next(lsp_progress[client_id]) then
+      lsp_progress[client_id] = nil
+    end
+  end
+end
+_G.Config.new_autocmd("LspProgress", nil, f, "Show LSP Progress")
