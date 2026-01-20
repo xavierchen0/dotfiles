@@ -63,6 +63,7 @@ brew "ty"                                  # Python type checker and language se
 # -- Formatters --
 brew "stylua"                              # Lua formatter
 brew "prettier"                            # Prettier formatter
+brew "ruff"                                # Python formatter and linter
 
 # -- Linters --
 brew "markdownlint-cli2"                   # Markdown linter
