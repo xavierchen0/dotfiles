@@ -59,6 +59,7 @@ cask "spotify"                             # Music
 brew "lua-language-server"                 # Lua language server
 brew "marksman"                            # Markdown language server
 brew "ty"                                  # Python type checker and language server
+brew "texlab"                              # LaTeX LSP
 
 # -- Formatters --
 brew "stylua"                              # Lua formatter
