@@ -8,4 +8,4 @@ local f = function()
 end
 _G.Config.new_autocmd("LspAttach", nil, f, "Code Actions")
 
-vim.lsp.enable({ "lua_ls", "marksman", "ty" })
+vim.lsp.enable({ "lua_ls", "marksman", "ty", "texlab" })
