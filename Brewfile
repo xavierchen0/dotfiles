@@ -65,6 +65,9 @@ brew "texlab"                              # LaTeX LSP
 brew "stylua"                              # Lua formatter
 brew "prettier"                            # Prettier formatter
 brew "ruff"                                # Python formatter and linter
+brew "perl"                                # For latexindent
+brew "cpanm"                               # For latexindent
+brew "latexindent"                         # LaTeX formatter
 
 # -- Linters --
 brew "markdownlint-cli2"                   # Markdown linter
