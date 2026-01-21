@@ -49,6 +49,10 @@ if ! brew bundle check --file="${XDG_CONFIG_HOME}/Brewfile"; then
 fi
 printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Installing via Brewfile" 
 
+# -- For latexindent
+cpanm YAML::Tiny
+cpanm File::HomeDir
+
 # -- Symlink files from .config to root dir
 printf "%s%b%-8s%b%s %s\n" "[  " "${BLUE}" "WORKING" "${NC}" " ]" "Creating symlinks" 
 ln -sf "${XDG_CONFIG_HOME}/zsh/.zshrc" "${HOME}/.zshrc"         # zshrc
