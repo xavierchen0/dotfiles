@@ -14,6 +14,12 @@ require("conform").setup({
       -- To organize the imports.
       "ruff_organize_imports",
     },
+    tex = { "latexindent" },
+  },
+  formatters = {
+    latexindent = {
+      append_args = { "-l" },
+    },
   },
   format_on_save = {
     timeout_ms = 500,
