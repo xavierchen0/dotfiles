@@ -246,8 +246,7 @@ wezterm.on("gui-startup", function(cmd)
     cwd = cfg_cwd,
     args = _merge_tables(args, { "zsh", "-lic", "lazygit;exec zsh" }),
   })
-  cfg_tab1:set_title("git+files")
-  local cfg_t1_pane2 = cfg_t1_pane1:split({ direction = "Right" })
+  cfg_tab1:set_title("git")
   local cfg_tab2, cfg_t2_pane1, _ = cfg_window:spawn_tab({})
   cfg_tab2:activate()
 
