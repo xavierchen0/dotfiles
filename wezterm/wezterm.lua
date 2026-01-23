@@ -266,7 +266,7 @@ wezterm.on("gui-startup", function(cmd)
   local tab, pane, window = mux.spawn_window({
     workspace = "default",
     cwd = wezterm.home_dir,
-    args = args,
+    args = _merge_tables(args, { "zsh", "-lic", "fastfetch;exec zsh" }),
   })
 
   -- Config workspace
