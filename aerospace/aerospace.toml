@@ -268,3 +268,7 @@ run = 'move-node-to-workspace W'
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
 run = 'layout tiling'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Xcode'
+run = 'layout tiling'
