@@ -29,6 +29,7 @@ brew "gh"                                  # Github cli
 brew "git-delta"                           # Git colorful diff pager
 brew "fastfetch"                           # System information tool
 brew "uv"                                  # Python package and env manager
+brew "swift"                               # Swift programming language
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                  # Keyboard macros and mapping
