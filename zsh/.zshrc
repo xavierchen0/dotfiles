@@ -35,6 +35,11 @@ export HOMEBREW_BUNDLE_FILE="${XDG_CONFIG_HOME}/Brewfile"
 autoload -Uz compinit
 compinit
 
+# -- Allow editing of command line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
 # -- Yazi; y to enter Yazi, q to quit at cwd, Q to quit at previous dir --
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
