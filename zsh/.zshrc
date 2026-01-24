@@ -21,7 +21,7 @@ alias bb="brew bundle --verbose"
 
 # -- zsh keybinds --
 bindkey -e # use emacs keybind so i can CTRL-A/CTRL-E
-  
+
 # -- Shell Prompt --
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config ~/.config/omp/config.omp.toml)"
