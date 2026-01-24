@@ -24,6 +24,11 @@ bindkey -e # use emacs keybind so i can CTRL-A/CTRL-E
 bindkey '^\' redo # redo
 bindkey " " magic-space; # expand history with space; especially for !
 
+# chpwd hooks
+chpwd() {
+  ls
+}
+
 # -- Shell Prompt --
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config ~/.config/omp/config.omp.toml)"
@@ -57,8 +62,3 @@ export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
 # -- television shell integration --
 # https://alexpasmantier.github.io/television/docs/Users/shell-integration
 eval "$(tv init zsh)"
-
-# chpwd hooks
-chpwd() {
-  ls
-}
