@@ -57,3 +57,8 @@ export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
 # -- television shell integration --
 # https://alexpasmantier.github.io/television/docs/Users/shell-integration
 eval "$(tv init zsh)"
+
+# chpwd hooks
+chpwd() {
+  ls
+}
