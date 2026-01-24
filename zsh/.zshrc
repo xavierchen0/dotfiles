@@ -1,3 +1,11 @@
+# Good to knows
+# - Suffix aliases
+# - Global aliases
+# - zmv batch move/rename
+# - named directory
+# - creating widgets
+# - hotkey insertion
+
 # -- Custom env vars --
 # Home config dir
 export XDG_CONFIG_HOME="$HOME/.config"
