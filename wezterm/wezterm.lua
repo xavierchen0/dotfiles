@@ -60,7 +60,7 @@ config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 1000 }
 config.max_fps = 240
 
 -- font_size
-config.font_size = 13.0
+config.font_size = 14.0
 
 -- Workspaces
 -- Set the domain to provide persistence
