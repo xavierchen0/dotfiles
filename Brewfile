@@ -62,6 +62,7 @@ brew "lua-language-server"                 # Lua language server
 brew "marksman"                            # Markdown language server
 brew "ty"                                  # Python type checker and language server
 brew "texlab"                              # LaTeX LSP
+brew "tinymist"                            # LSP for Typst
 
 # -- Formatters --
 brew "stylua"                              # Lua formatter
