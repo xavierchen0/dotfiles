@@ -26,6 +26,7 @@ function cfg() {
 # -- Custom aliases --
 alias ls="eza --color=always --icons=always"
 alias bb="brew bundle --verbose --no-upgrade"
+alias bu="brew upgrade --verbose --dry-run"
 alias -s pdf=sioyek
 
 # -- zsh keybinds --
