@@ -30,6 +30,7 @@ brew "git-delta"                           # Git colorful diff pager
 brew "fastfetch"                           # System information tool
 brew "uv"                                  # Python package and env manager
 brew "swift"                               # Swift programming language
+brew "typst"                               # A typsetting compiler
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                  # Keyboard macros and mapping
