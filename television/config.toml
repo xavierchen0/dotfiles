@@ -120,10 +120,8 @@ ctrl-c = "quit"
 # Navigation and selection
 # -----------------------
 down = "select_next_entry"
-ctrl-n = "select_next_entry"
 ctrl-j = "select_next_entry"
 up = "select_prev_entry"
-ctrl-p = "select_prev_entry"
 ctrl-k = "select_prev_entry"
 
 # History navigation
@@ -133,8 +131,8 @@ ctrl-down = "select_next_history"
 
 # Multi-selection
 # --------------
-space = "toggle_selection_down"
-backtab = "toggle_selection_up"
+ctrl-n = "toggle_selection_down"
+ctrl-p = "toggle_selection_up"
 enter = "confirm_selection"
 
 # Preview panel control
