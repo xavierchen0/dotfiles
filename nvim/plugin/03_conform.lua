@@ -8,7 +8,7 @@ require("conform").setup({
     markdown = { "prettier" },
     python = {
       -- To fix auto-fixable lint errors.
-      "ruff_fix",
+      -- "ruff_fix",
       -- To run the Ruff formatter.
       "ruff_format",
       -- To organize the imports.
