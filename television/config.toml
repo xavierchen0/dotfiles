@@ -220,6 +220,7 @@ fallback_channel = "files"
   "gzip",
   "gunzip",
   "xz",
+  "nvim",
 ]
 "git-diff" = ["git add", "git restore"]
 "git-branch" = [
@@ -232,7 +233,7 @@ fallback_channel = "files"
 ]
 "git-log" = ["git log", "git show"]
 "docker-images" = ["docker run"]
-"git-repos" = ["nvim", "code", "hx", "git clone"]
+"git-repos" = ["code", "hx", "git clone"]
 
 
 [shell_integration.keybindings]
