@@ -20,6 +20,9 @@ require("conform").setup({
     latexindent = {
       append_args = { "-l" },
     },
+    prettier = {
+      append_args = { "--prose-wrap=always" },
+    },
   },
   format_on_save = {
     timeout_ms = 500,
