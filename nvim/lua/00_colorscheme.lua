@@ -11,4 +11,4 @@ local f = function()
 end
 _G.Config.new_autocmd("ColorScheme", nil, f, "Remove Unused highlight when colorscheme loads/switch")
 
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("rose-pine-moon")
