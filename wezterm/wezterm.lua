@@ -139,6 +139,18 @@ config.keys = {
     mods = "LEADER|SHIFT",
     action = act.PaneSelect({ mode = "SwapWithActiveKeepFocus" }),
   },
+  -- Swap Tabs to the left
+  {
+    key = "<",
+    mods = "LEADER|SHIFT",
+    action = act.MoveTabRelative(-1),
+  },
+  -- Swap Tabs to the right
+  {
+    key = ">",
+    mods = "LEADER|SHIFT",
+    action = act.MoveTabRelative(1),
+  },
   -- Toggle Pane Zoom
   {
     key = "z",
