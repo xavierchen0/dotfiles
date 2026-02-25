@@ -23,6 +23,10 @@ function cfg() {
   cd "${XDG_CONFIG_HOME}"
 }
 
+function mergepdf() {
+    gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"
+}
+
 # -- Custom aliases --
 alias ls="eza --color=always --icons=always"
 alias bb="brew bundle --verbose --no-upgrade"
