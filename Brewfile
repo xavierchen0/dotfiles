@@ -64,6 +64,7 @@ brew "marksman"                            # Markdown language server
 brew "ty"                                  # Python type checker and language server
 brew "texlab"                              # LaTeX LSP
 brew "tinymist"                            # LSP for Typst
+brew "harper"                              # Grammar Checker LSP
 
 # -- Formatters --
 brew "stylua"                              # Lua formatter
