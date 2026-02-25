@@ -38,6 +38,8 @@ alias -s pdf=sioyek
 bindkey -e # use emacs keybind so i can CTRL-A/CTRL-E
 bindkey '^\' redo # redo
 bindkey " " magic-space; # expand history with space; especially for !
+bindkey '^j' backward-word
+bindkey '^k' forward-word
 
 # -- chpwd hooks -- 
 chpwd() {
