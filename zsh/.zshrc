@@ -27,6 +27,10 @@ function mergepdf() {
     gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"
 }
 
+function reducepdf() {
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$1" "${@:2}"
+}
+
 # -- Custom aliases --
 alias ls="eza --color=always --icons=always"
 alias bb="brew bundle --verbose --no-upgrade"
