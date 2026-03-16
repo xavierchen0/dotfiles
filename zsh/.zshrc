@@ -31,6 +31,10 @@ function reducepdf() {
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$1" "${@:2}"
 }
 
+function mj() {
+  uv run marimo export ipynb "$1" -o "$2";uv run jupyter notebook $2
+}
+
 # -- Custom aliases --
 alias ls="eza --color=always --icons=always"
 alias bb="brew bundle --verbose --no-upgrade"
