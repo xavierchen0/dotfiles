@@ -5,7 +5,7 @@ final_space = true
   source = 'cdn'
   interval = '24h'
   auto = false
-  notice = true
+  notice = false
 
 # LEFT: Path + Git
 [[blocks]]
