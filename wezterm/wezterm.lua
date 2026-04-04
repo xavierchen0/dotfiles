@@ -292,41 +292,6 @@ wezterm.on("gui-startup", function(cmd)
   local cfg_tab2, cfg_t2_pane1, _ = cfg_window:spawn_tab({})
   cfg_tab2:activate()
 
-  -- Derivatives workspace
-  local derivatives_cwd = wezterm.home_dir .. "/dev/classes/qf602_derivatives"
-  local derivatives_tab1, derivatives_t1_pane1, derivatives_window = mux.spawn_window({
-    workspace = "derivatives",
-    cwd = derivatives_cwd,
-  })
-
-  -- econometrics of financial markets workspace
-  local econometrics_cwd = wezterm.home_dir .. "/dev/classes/qf604_econometrics_of_financial_markets"
-  local econometrics_tab1, econometrics_t1_pane1, econometrics_window = mux.spawn_window({
-    workspace = "econometrics",
-    cwd = econometrics_cwd,
-  })
-
-  -- fixed income workspace
-  local fixed_income_cwd = wezterm.home_dir .. "/dev/classes/qf605_fixed_income_securities"
-  local fixed_income_tab1, fixed_income_t1_pane1, fixed_income_window = mux.spawn_window({
-    workspace = "fixed_income",
-    cwd = fixed_income_cwd,
-  })
-
-  -- numerical methods workspace
-  local numerical_methods_cwd = wezterm.home_dir .. "/dev/classes/qf607_numerical_methods"
-  local numerical_methods_tab1, numerical_methods_t1_pane1, numerical_methods_window = mux.spawn_window({
-    workspace = "numerical_methods",
-    cwd = numerical_methods_cwd,
-  })
-
-  -- risk analysis workspace
-  local risk_analysis_cwd = wezterm.home_dir .. "/dev/classes/qf609_risk_analysis"
-  local risk_analysis_tab1, risk_analysis_t1_pane1, risk_analysis_window = mux.spawn_window({
-    workspace = "risk_analysis",
-    cwd = risk_analysis_cwd,
-  })
-
   -- Set default workspace
   mux.set_active_workspace("default")
 end)
