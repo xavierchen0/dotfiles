@@ -286,11 +286,7 @@ wezterm.on("gui-startup", function(cmd)
   local cfg_tab1, cfg_t1_pane1, cfg_window = mux.spawn_window({
     workspace = "config",
     cwd = cfg_cwd,
-    args = _merge_tables(args, { "zsh", "-lic", "lazygit;exec zsh" }),
   })
-  cfg_tab1:set_title("git")
-  local cfg_tab2, cfg_t2_pane1, _ = cfg_window:spawn_tab({})
-  cfg_tab2:activate()
 
   -- Set default workspace
   mux.set_active_workspace("default")
