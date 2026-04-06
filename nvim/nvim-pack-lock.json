@@ -7,8 +7,7 @@
     },
     "codesnap.nvim": {
       "rev": "0a0941340376439a25d6cd8a4d1d2b372edbfdbd",
-      "src": "https://github.com/mistricky/codesnap.nvim",
-      "version": ">=2.0.0"
+      "src": "https://github.com/mistricky/codesnap.nvim"
     },
     "conform": {
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
