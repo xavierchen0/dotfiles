@@ -71,4 +71,4 @@ vim.o.complete = ".,w,b,kspell"                    -- Use less sources
 vim.o.completeopt = "menuone,noselect,fuzzy,popup" -- Use custom behavior
 
 -- :h vim._extui
-require("vim._extui").enable({})
+require("vim._core.ui2").enable({})
