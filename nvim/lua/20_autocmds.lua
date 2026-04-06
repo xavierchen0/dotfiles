@@ -78,6 +78,7 @@ f = function(event)
       status = "running",
       percent = value.percentage,
       title = string.format("LspProgress(%s[%d])", client.name, event.data.client_id),
+      source = client.name,
     }
     lsp_progress[client_id][token] = progress
     progress.id = vim.api.nvim_echo({ { value.title } }, false, progress)
