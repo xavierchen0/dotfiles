@@ -65,6 +65,7 @@ brew "ty"                                  # Python type checker and language se
 brew "texlab"                              # LaTeX LSP
 brew "tinymist"                            # LSP for Typst
 brew "harper"                              # Grammar Checker LSP
+brew "llvm"                                # Clangd C++ LSP
 
 # -- Formatters --
 brew "stylua"                              # Lua formatter
