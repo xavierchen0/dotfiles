@@ -25,11 +25,11 @@ dap.configurations.cpp = {
 }
 
 -- Keymaps
-vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Debug: Continue" })
-vim.keymap.set("n", "<leader>do", dap.step_over, { desc = "Debug: Step Over" })
-vim.keymap.set("n", "<leader>di", dap.step_into, { desc = "Debug: Step Into" })
-vim.keymap.set("n", "<leader>dO", dap.step_out, { desc = "Debug: Step Out" })
-vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Debug: Toggle Breakpoint" })
-vim.keymap.set("n", "<Leader>dlp", function()
+vim.keymap.set("n", "<leader>bc", dap.continue, { desc = "Debug: Continue" })
+vim.keymap.set("n", "<leader>bo", dap.step_over, { desc = "Debug: Step Over" })
+vim.keymap.set("n", "<leader>bi", dap.step_into, { desc = "Debug: Step Into" })
+vim.keymap.set("n", "<leader>bO", dap.step_out, { desc = "Debug: Step Out" })
+vim.keymap.set("n", "<leader>bb", dap.toggle_breakpoint, { desc = "Debug: Toggle Breakpoint" })
+vim.keymap.set("n", "<Leader>blp", function()
   dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
 end, { desc = "Debug: Set Log point" })
