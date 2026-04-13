@@ -1,5 +1,7 @@
 vim.pack.add({
   { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
+  { src = "https://github.com/zitrocode/carvion.nvim", name = "carvion" },
+  { src = "https://github.com/ThorstenRhau/token", name = "token" },
 })
 
 require("rose-pine").setup()
@@ -11,4 +13,4 @@ local f = function()
 end
 _G.Config.new_autocmd("ColorScheme", nil, f, "Remove Unused highlight when colorscheme loads/switch")
 
-vim.cmd.colorscheme("rose-pine-moon")
+vim.cmd.colorscheme("carvion")

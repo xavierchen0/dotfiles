@@ -5,6 +5,10 @@
       "src": "https://github.com/Saghen/blink.cmp",
       "version": ">=0.0.0"
     },
+    "carvion": {
+      "rev": "162732074f4f642d99eaa17cd69876f0d4b158dd",
+      "src": "https://github.com/zitrocode/carvion.nvim"
+    },
     "codesnap.nvim": {
       "rev": "0a0941340376439a25d6cd8a4d1d2b372edbfdbd",
       "src": "https://github.com/mistricky/codesnap.nvim"
@@ -66,6 +70,10 @@
     "rose-pine": {
       "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
       "src": "https://github.com/rose-pine/neovim"
+    },
+    "token": {
+      "rev": "6fe4a706ac26311066b2fef97fe2a82cafc41b63",
+      "src": "https://github.com/ThorstenRhau/token"
     },
     "tv.nvim": {
       "rev": "c0603ca8f31299c83deaa9a24a63d67116db25cd",
