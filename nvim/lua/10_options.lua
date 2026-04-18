@@ -70,5 +70,8 @@ vim.o.formatlistpat = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 vim.o.complete = ".,w,b,kspell"                    -- Use less sources
 vim.o.completeopt = "menuone,noselect,fuzzy,popup" -- Use custom behavior
 
+-- Set make program
+vim.o.makeprg ="cmake --build build"
+
 -- :h vim._extui
 require("vim._core.ui2").enable({})
