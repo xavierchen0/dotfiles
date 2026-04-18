@@ -32,6 +32,7 @@ brew "uv"                                  # Python package and env manager
 brew "swift"                               # Swift programming language
 brew "typst"                               # A typsetting compiler
 brew "gemini-cli"                          # CLI for Gemini
+brew "cmake"                               # Meta build system for C++
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                  # Keyboard macros and mapping
