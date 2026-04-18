@@ -45,7 +45,7 @@ printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Git Clone dot
 printf "%s%b%-8s%b%s %s\n" "[  " "${BLUE}" "WORKING" "${NC}" " ]" "Installing via Brewfile" 
 if ! brew bundle check --file="${XDG_CONFIG_HOME}/Brewfile"; then
   brew bundle cleanup --file="${XDG_CONFIG_HOME}/Brewfile"
-  brew bundle --file="${XDG_CONFIG_HOME}/Brewfile"
+  brew bundle --file="${XDG_CONFIG_HOME}/Brewfile" --verbose --no-upgrade
 fi
 printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Installing via Brewfile" 
 
