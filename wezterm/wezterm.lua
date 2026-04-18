@@ -288,6 +288,41 @@ wezterm.on("gui-startup", function(cmd)
     cwd = cfg_cwd,
   })
 
+  -- TA workspace
+  local ta_cwd = wezterm.home_dir .. "/dev/ta"
+  local ta_tab1, ta_t1_pane1, ta_window = mux.spawn_window({
+    workspace = "ta",
+    cwd = ta_cwd,
+  })
+
+  -- Class cpp workspace
+  local cpp_cwd = wezterm.home_dir .. "/dev/classes/cpp"
+  local cpp_tab1, cpp_t1_pane1, cpp_window = mux.spawn_window({
+    workspace = "cpp",
+    cwd = cpp_cwd,
+  })
+
+  -- Class micorostructure workspace
+  local micro_cwd = wezterm.home_dir .. "/dev/classes/micro"
+  local micro_tab1, micro_t1_pane1, micro_window = mux.spawn_window({
+    workspace = "micro",
+    cwd = micro_cwd,
+  })
+
+  -- Class portfolio workspace
+  local port_cwd = wezterm.home_dir .. "/dev/classes/port"
+  local port_tab1, port_t1_pane1, port_window = mux.spawn_window({
+    workspace = "port",
+    cwd = port_cwd,
+  })
+
+  -- Class trading strategies workspace
+  local trade_cwd = wezterm.home_dir .. "/dev/classes/trade"
+  local trade_tab1, trade_t1_pane1, trade_window = mux.spawn_window({
+    workspace = "trade",
+    cwd = trade_cwd,
+  })
+
   -- Set default workspace
   mux.set_active_workspace("default")
 end)
