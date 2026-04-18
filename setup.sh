@@ -49,6 +49,10 @@ if ! brew bundle check --file="${XDG_CONFIG_HOME}/Brewfile"; then
 fi
 printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Installing via Brewfile" 
 
+# -- Install debugpy for debugging Python
+uv venv ~/.virtualenvs/debugpy
+uv pip install --python ~/.virtualenvs/debugpy debugpy
+
 # -- For latexindent
 cpanm YAML::Tiny
 cpanm File::HomeDir
