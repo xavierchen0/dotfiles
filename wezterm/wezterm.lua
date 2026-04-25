@@ -295,6 +295,13 @@ wezterm.on("gui-startup", function(cmd)
     cwd = ta_cwd,
   })
 
+  -- Learn CPP workspace
+  local learn_cpp_cwd = wezterm.home_dir .. "/dev/learncpp"
+  local learn_cpp_tab1, learn_cpp_t1_pane1, learn_cpp_window = mux.spawn_window({
+    workspace = "learn_cpp",
+    cwd = learn_cpp_cwd,
+  })
+
   -- Class cpp workspace
   local cpp_cwd = wezterm.home_dir .. "/dev/classes/cpp"
   local cpp_tab1, cpp_t1_pane1, cpp_window = mux.spawn_window({
