@@ -31,7 +31,6 @@ brew "fastfetch"                           # System information tool
 brew "uv"                                  # Python package and env manager
 brew "swift"                               # Swift programming language
 brew "typst"                               # A typsetting compiler
-brew "gemini-cli"                          # CLI for Gemini
 brew "cmake"                               # Meta build system for C++
 
 # -- Casks (GUI Apps) -- 
@@ -58,6 +57,7 @@ cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
 cask "zoom"                                # Zoom
 cask "sioyek"                              # PDF Reader with vim-like keybinds
 cask "spotify"                             # Music
+cask "antigravity-cli"                     # CLI for Gemini
 
 # -- LSPs --
 brew "lua-language-server"                 # Lua language server
