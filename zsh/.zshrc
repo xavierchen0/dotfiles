@@ -43,6 +43,13 @@ alias tw="typst watch --open sioyek"
 alias -s pdf=sioyek
 alias crun="clang++ -std=c++20 -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -g -O0"
 
+# git
+alias gs="git status"
+alias gap="git add --patch"
+alias gc="git commit"
+alias gd="git diff"
+alias gds="git diff --staged"
+
 # -- zsh keybinds --
 bindkey -e # use emacs keybind so i can CTRL-A/CTRL-E
 bindkey '^\' redo # redo
