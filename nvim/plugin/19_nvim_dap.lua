@@ -1,9 +1,5 @@
 vim.pack.add({ { src = "https://github.com/mfussenegger/nvim-dap" } })
 
-vim.pack.add({
-  { src = "https://github.com/xavierchen0/hooks.nvim" },
-})
-
 local dap = require("dap")
 
 dap.adapters.codelldb = {
