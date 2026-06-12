@@ -169,36 +169,6 @@ config.keys = {
     mods = "LEADER",
     action = act.SwitchToWorkspace({ name = "config" }),
   },
-  -- Derivatives workspace
-  {
-    key = "1",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace({ name = "derivatives" }),
-  },
-  -- econometrics of financial markets workspace
-  {
-    key = "2",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace({ name = "econometrics" }),
-  },
-  -- fixed income workspace
-  {
-    key = "3",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace({ name = "fixed_income" }),
-  },
-  -- numerical methods workspace
-  {
-    key = "4",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace({ name = "numerical_methods" }),
-  },
-  -- risk analysis workspace
-  {
-    key = "5",
-    mods = "LEADER",
-    action = act.SwitchToWorkspace({ name = "risk_analysis" }),
-  },
   -- Fuzzy find and activate workspaces
   {
     key = "w",
