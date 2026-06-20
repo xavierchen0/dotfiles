@@ -44,7 +44,7 @@ alias -s pdf=sioyek
 alias crun="clang++ -std=c++20 -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -g -O0"
 
 # git
-alias gs="git status"
+alias gss="git status"
 alias gap="git add --patch"
 alias gc="git commit"
 alias gd="git diff"
