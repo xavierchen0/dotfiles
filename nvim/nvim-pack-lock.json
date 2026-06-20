@@ -78,10 +78,6 @@
     "tv.nvim": {
       "rev": "b6611fa96f1b5e7a1f01d31db944b87058f03146",
       "src": "https://github.com/alexpasmantier/tv.nvim"
-    },
-    "vimtex": {
-      "rev": "24e229914182ff301496a3e2c4214b28c4928d3f",
-      "src": "https://github.com/lervag/vimtex"
     }
   }
 }

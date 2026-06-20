@@ -29,7 +29,6 @@ brew "gh"                                  # Github cli
 brew "git-delta"                           # Git colorful diff pager
 brew "fastfetch"                           # System information tool
 brew "uv"                                  # Python package and env manager
-brew "swift"                               # Swift programming language
 brew "typst"                               # A typsetting compiler
 brew "cmake"                               # Meta build system for C++
 
@@ -50,7 +49,6 @@ cask "alt-tab"                             # Better Alt-Tab; Window Specific rat
 cask "microsoft-outlook"                   # Email client
 cask "bitwarden"                           # Password manager
 cask "shottr"                              # Better screenshot tool
-cask "mactex-no-gui"                       # Latex for Mac without GUI applications
 cask "microsoft-excel"                     # Microsoft Excel -_-
 cask "microsoft-word"                      # Microsoft Word -_-
 cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
@@ -63,7 +61,6 @@ cask "antigravity-cli"                     # CLI for Gemini
 brew "lua-language-server"                 # Lua language server
 brew "marksman"                            # Markdown language server
 brew "ty"                                  # Python type checker and language server
-brew "texlab"                              # LaTeX LSP
 brew "tinymist"                            # LSP for Typst
 brew "harper"                              # Grammar Checker LSP
 brew "llvm"                                # Clangd C++ LSP
@@ -72,9 +69,6 @@ brew "llvm"                                # Clangd C++ LSP
 brew "stylua"                              # Lua formatter
 brew "prettier"                            # Prettier formatter
 brew "ruff"                                # Python formatter and linter
-brew "perl"                                # For latexindent
-brew "cpanm"                               # For latexindent
-brew "latexindent"                         # LaTeX formatter
 
 # -- Linters --
 brew "markdownlint-cli2"                   # Markdown linter

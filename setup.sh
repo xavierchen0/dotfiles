@@ -53,10 +53,6 @@ printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Installing vi
 uv venv ~/.virtualenvs/debugpy
 uv pip install --python ~/.virtualenvs/debugpy debugpy
 
-# -- For latexindent
-cpanm YAML::Tiny
-cpanm File::HomeDir
-
 # -- Symlink files from .config to root dir
 printf "%s%b%-8s%b%s %s\n" "[  " "${BLUE}" "WORKING" "${NC}" " ]" "Creating symlinks" 
 ln -sf "${XDG_CONFIG_HOME}/zsh/.zshrc" "${HOME}/.zshrc"         # zshrc
