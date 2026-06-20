@@ -31,6 +31,7 @@ brew "fastfetch"                           # System information tool
 brew "uv"                                  # Python package and env manager
 brew "typst"                               # A typsetting compiler
 brew "cmake"                               # Meta build system for C++
+brew "ghostscript"                         # For PDFs
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                  # Keyboard macros and mapping
