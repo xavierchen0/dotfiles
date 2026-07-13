@@ -1,76 +1,74 @@
-# -- Taps --
-tap "FelixKratz/formulae"                  # Tap for coloured window borders
-tap "jandedobbeleer/oh-my-posh"            # Tap for Shell prompt
-tap "nikitabobko/tap"                      # Tap for Tiling manager
-
 # -- CLI tools --
-brew "git"                                 # git init
-brew "neovim"                              # Best editor
-brew "borders"                             # Coloured window borders
-brew "oh-my-posh"                          # Shell Prompt
-brew "lazygit"                             # Git GUI
-brew "ffmpeg"                              # Video editing (yazi)
-brew "sevenzip"                            # Archive (yazi)
-brew "jq"                                  # JSON query (yazi)
-brew "poppler"                             # PDF render (yazi)
-brew "fd"                                  # File searching (yazi)
-brew "ripgrep"                             # File content searching (yazi)
-brew "fzf"                                 # Interactive Searching (yazi)
-brew "zoxide"                              # Smarter cd (yazi)
-brew "resvg"                               # SVG preview (yazi)
-brew "imagemagick"                         # Font, HEIC, and JPEG XL preview SVG preview (yazi)
-brew "yazi"                                # Terminal file manager
-brew "eza"                                 # Better ls
-brew "television"                          # Fuzzy finder like ls
-brew "tree-sitter-cli"                     # Treesitter-cli
-brew "bat"                                 # Colorful cat
-brew "tlrc"                                # Practical examples of CLI tools
-brew "gh"                                  # Github cli
-brew "git-delta"                           # Git colorful diff pager
-brew "fastfetch"                           # System information tool
-brew "uv"                                  # Python package and env manager
-brew "typst"                               # A typsetting compiler
-brew "cmake"                               # Meta build system for C++
-brew "ghostscript"                         # For PDFs
-brew "bitwarden-cli"
+brew "git"                                     # git init
+brew "neovim"                                  # Best editor
+brew "felixkratz/formulae/borders",            # Coloured window borders
+     trusted: true             
+brew "jandedobbeleer/oh-my-posh/oh-my-posh",   # Shell Prompt
+     trusted: true             
+brew "lazygit"                                 # Git GUI
+brew "ffmpeg"                                  # Video editing (yazi)
+brew "sevenzip"                                # Archive (yazi)
+brew "jq"                                      # JSON query (yazi)
+brew "poppler"                                 # PDF render (yazi)
+brew "fd"                                      # File searching (yazi)
+brew "ripgrep"                                 # File content searching (yazi)
+brew "fzf"                                     # Interactive Searching (yazi)
+brew "zoxide"                                  # Smarter cd (yazi)
+brew "resvg"                                   # SVG preview (yazi)
+brew "imagemagick"                             # Font, HEIC, and JPEG XL preview SVG preview (yazi)
+brew "yazi"                                    # Terminal file manager
+brew "eza"                                     # Better ls
+brew "television"                              # Fuzzy finder like ls
+brew "tree-sitter-cli"                         # Treesitter-cli
+brew "bat"                                     # Colorful cat
+brew "tlrc"                                    # Practical examples of CLI tools
+brew "gh"                                      # Github cli
+brew "git-delta"                               # Git colorful diff pager
+brew "fastfetch"                               # System information tool
+brew "uv"                                      # Python package and env manager
+brew "typst"                                   # A typsetting compiler
+brew "cmake"                                   # Meta build system for C++
+brew "ghostscript"                             # For PDFs
+brew "bitwarden-cli"                           # CLI for password manager
 
 # -- Casks (GUI Apps) -- 
-cask "karabiner-elements"                  # Keyboard macros and mapping
-cask "displaylink"                         # Support multiple monitors on Macbook Pro
-cask "aerospace"                           # Tiling manager
-cask "firefox"                             # Browser
-cask "google-chrome"                       # Browser
-cask "wezterm"                             # Terminal
-cask "raycast"                             # Better spotlight
-cask "mos"                                 # Smooth mouse scrolling 
-cask "hiddenbar"                           # Hide statusbar icons
-cask "stats"                               # Computer statistic
-cask "whatsapp"                            # Chat app
-cask "telegram"                            # Chat app
-cask "alt-tab"                             # Better Alt-Tab; Window Specific rather than application
-cask "microsoft-outlook"                   # Email client
-cask "bitwarden"                           # Password manager
-cask "shottr"                              # Better screenshot tool
-cask "microsoft-excel"                     # Microsoft Excel -_-
-cask "microsoft-word"                      # Microsoft Word -_-
-cask "microsoft-powerpoint"                # Microsoft Powerpoint -_-
-cask "zoom"                                # Zoom
-cask "sioyek"                              # PDF Reader with vim-like keybinds
-cask "spotify"                             # Music
-cask "antigravity-cli"                     # CLI for Gemini
+cask "karabiner-elements"                      # Keyboard macros and mapping
+cask "displaylink"                             # Support multiple monitors on Macbook Pro
+cask "nikitabobko/tap/aerospace",              # Tiling manager
+     trusted: true             
+cask "firefox"                                 # Browser
+cask "google-chrome"                           # Browser
+cask "wezterm"                                 # Terminal
+cask "raycast"                                 # Better spotlight
+cask "mos"                                     # Smooth mouse scrolling 
+cask "hiddenbar"                               # Hide statusbar icons
+cask "stats"                                   # Computer statistic
+cask "whatsapp"                                # Chat app
+cask "telegram"                                # Chat app
+cask "alt-tab"                                 # Better Alt-Tab; Window Specific rather than application
+cask "microsoft-outlook"                       # Email client
+cask "bitwarden"                               # Password manager
+cask "shottr"                                  # Better screenshot tool
+cask "microsoft-excel"                         # Microsoft Excel -_-
+cask "microsoft-word"                          # Microsoft Word -_-
+cask "microsoft-powerpoint"                    # Microsoft Powerpoint -_-
+cask "zoom"                                    # Zoom
+cask "sioyek"                                  # PDF Reader with vim-like keybinds
+cask "spotify"                                 # Music
+cask "antigravity-cli"                         # CLI for Gemini
 
 # -- LSPs --
-brew "lua-language-server"                 # Lua language server
-brew "marksman"                            # Markdown language server
-brew "ty"                                  # Python type checker and language server
-brew "tinymist"                            # LSP for Typst
-brew "harper"                              # Grammar Checker LSP
-brew "llvm"                                # Clangd C++ LSP
+brew "lua-language-server"                     # Lua language server
+brew "marksman"                                # Markdown language server
+brew "ty"                                      # Python type checker and language server
+brew "tinymist"                                # LSP for Typst
+brew "harper"                                  # Grammar Checker LSP
+brew "llvm"                                    # Clangd C++ LSP
 
 # -- Formatters --
-brew "stylua"                              # Lua formatter
-brew "prettier"                            # Prettier formatter
-brew "ruff"                                # Python formatter and linter
+brew "stylua"                                  # Lua formatter
+brew "prettier"                                # Prettier formatter
+brew "ruff"                                    # Python formatter and linter
 
 # -- Linters --
-brew "markdownlint-cli2"                   # Markdown linter
+brew "markdownlint-cli2"                       # Markdown linter
