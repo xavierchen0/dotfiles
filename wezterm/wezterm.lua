@@ -258,12 +258,20 @@ wezterm.on("gui-startup", function(cmd)
     cwd = cfg_cwd,
   })
 
-  -- resume workspace
-  local resume_cwd = wezterm.home_dir .. "/dev/resume"
-  local resume_tab1, resume_t1_pane1, resume_window = mux.spawn_window({
-    workspace = "resume",
-    cwd = resume_cwd,
-  })
+  local hostname = wezterm.hostname()
+  -- Vary workspaces based on machine
+  if hostname:find("Xavier") then
+    -- resume workspace
+    local resume_cwd = wezterm.home_dir .. "/dev/resume"
+    local resume_tab1, resume_t1_pane1, resume_window = mux.spawn_window({
+      workspace = "resume",
+      cwd = resume_cwd,
+    })
+  elseif hostname:find("IQs") then
+    wezterm.log_info("Work computer")
+  else
+    wezterm.log_error("No hostname found; Unable to load custom workspaces.")
+  end
 
   -- Set default workspace
   mux.set_active_workspace("default")
