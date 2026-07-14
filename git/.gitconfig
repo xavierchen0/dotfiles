@@ -18,3 +18,10 @@
 [delta]
     navigate = true    # use n and N to move between diff sections
     side-by-side = true
+# custom gitconfig based on machine (e.g. personal vs work)
+[include]
+  path = ~/.gitconfig-personal
+[include] # override global gitconfig if work's gitconfig exists
+  path = ~/.gitconfig-work
+[includeIf "gitdir:~/.config/"] # always use personal gitconfig in .config dir (dotfiles)
+  path = ~/.gitconfig-personal

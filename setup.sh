@@ -2,10 +2,11 @@
 
 # ==========================================================
 # My setup code for a new machine (MacOS)
-# 
-# Note:
-#   - Ensure that SSH keys are downloaded into local machine, 
+#
+# Required steps:
+#   - Ensure that SSH keys are downloaded into local machine,
 #     and added to ssh agent.
+#   - (Work) Create work gitconfig and place it in root
 # ===========================================================
 
 # -- Authenticate once --
@@ -55,7 +56,8 @@ uv pip install --python ~/.virtualenvs/debugpy debugpy
 
 # -- Symlink files from .config to root dir
 printf "%s%b%-8s%b%s %s\n" "[  " "${BLUE}" "WORKING" "${NC}" " ]" "Creating symlinks" 
-ln -sf "${XDG_CONFIG_HOME}/zsh/.zshrc" "${HOME}/.zshrc"         # zshrc
-ln -sf "${XDG_CONFIG_HOME}/git/.gitconfig" "${HOME}/.gitconfig" # gitconfig
+ln -sf "${XDG_CONFIG_HOME}/zsh/.zshrc" "${HOME}/.zshrc"                           # zshrc
+ln -sf "${XDG_CONFIG_HOME}/git/.gitconfig" "${HOME}/.gitconfig"                   # general gitconfig
+ln -sf "${XDG_CONFIG_HOME}/git/.gitconfig-personal" "${HOME}/.gitconfig-personal" # personal gitconfig
 ln -sf "${HOME}/Library/Mobile Documents/com~apple~CloudDocs" "${HOME}/iCloud"
 printf "%s%b%-8s%b%s %s\n" "[  " "${GREEN}" "  DONE" "${NC}" " ]" "Creating symlinks" 
