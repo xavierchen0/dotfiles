@@ -56,6 +56,7 @@ cask "zoom"                                    # Zoom
 cask "sioyek"                                  # PDF Reader with vim-like keybinds
 cask "spotify"                                 # Music
 cask "antigravity-cli"                         # CLI for Gemini
+cask "codex"                                   # CLI for Chatgpt
 
 # -- LSPs --
 brew "lua-language-server"                     # Lua language server
