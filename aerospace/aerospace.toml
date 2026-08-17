@@ -226,7 +226,7 @@ if.app-name-regex-substring = 'Outlook'
 run = 'move-node-to-workspace O'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Calendar'
+if.app-name-regex-substring = 'Calendar|Gmail'
 run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
