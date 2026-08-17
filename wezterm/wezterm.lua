@@ -267,6 +267,12 @@ wezterm.on("gui-startup", function(cmd)
       workspace = "resume",
       cwd = resume_cwd,
     })
+    -- iCloud workspace
+    local icloud_cwd = wezterm.home_dir .. "/iCloud"
+    local icloud_tab1, icloud_t1_pane1, icloud_window = mux.spawn_window({
+      workspace = "icloud",
+      cwd = icloud_cwd,
+    })
   elseif hostname:find("IQs") then
     wezterm.log_info("Work computer")
   else
