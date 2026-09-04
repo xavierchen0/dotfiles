@@ -260,7 +260,7 @@ wezterm.on("gui-startup", function(cmd)
 
   local hostname = wezterm.hostname()
   -- Vary workspaces based on machine
-  if hostname:find("Xavier") then
+  if hostname:find("xavier") then
     -- resume workspace
     local resume_cwd = wezterm.home_dir .. "/dev/resume"
     local resume_tab1, resume_t1_pane1, resume_window = mux.spawn_window({
