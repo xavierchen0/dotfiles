@@ -32,6 +32,7 @@ brew "ghostscript"                             # For PDFs
 brew "bitwarden-cli"                           # CLI for password manager
 brew "pgcli"                                   # Postgres DB Interface
 brew "postgresql@18"                           # Postgres DB
+brew "node"                                    # Latest node
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                      # Keyboard macros and mapping
