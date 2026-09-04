@@ -273,6 +273,30 @@ wezterm.on("gui-startup", function(cmd)
       workspace = "icloud",
       cwd = icloud_cwd,
     })
+    -- it5001 workspace
+    local it5001_cwd = wezterm.home_dir .. "/dev/classes/it5001"
+    local it5001_tab1, it5001_t1_pane1, it5001_window = mux.spawn_window({
+      workspace = "it5001",
+      cwd = it5001_cwd,
+    })
+    -- it5002 workspace
+    local it5002_cwd = wezterm.home_dir .. "/dev/classes/it5002"
+    local it5002_tab1, it5002_t1_pane1, it5002_window = mux.spawn_window({
+      workspace = "it5002",
+      cwd = it5002_cwd,
+    })
+    -- it5004 workspace
+    local it5004_cwd = wezterm.home_dir .. "/dev/classes/it5004"
+    local it5004_tab1, it5004_t1_pane1, it5004_window = mux.spawn_window({
+      workspace = "it5004",
+      cwd = it5004_cwd,
+    })
+    -- it5008 workspace
+    local it5008_cwd = wezterm.home_dir .. "/dev/classes/it5008"
+    local it5008_tab1, it5008_t1_pane1, it5008_window = mux.spawn_window({
+      workspace = "it5008",
+      cwd = it5008_cwd,
+    })
   elseif hostname:find("IQs") then
     wezterm.log_info("Work computer")
   else
