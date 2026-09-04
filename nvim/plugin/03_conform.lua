@@ -24,8 +24,29 @@ require("conform").setup({
       append_args = { "--prose-wrap=always" },
     },
   },
-  format_on_save = {
-    timeout_ms = 500,
-    lsp_format = "fallback",
-  },
+  format_on_save = function(bufnr)
+    -- 1. Check for the user-triggered buffer toggle
+    if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+      return
+    end
+
+    -- 2. Disable for a specific file pattern or name
+    local bufname = vim.api.nvim_buf_get_name(bufnr)
+    if bufname:match("qmk_firmware/.-/keymap%.c$") then
+      return
+    end
+
+    if bufname:match("%.config/my_lily58/keymap%.c$") then
+      return
+    end
+
+    return {
+      timeout_ms = 500,
+      lsp_format = "fallback",
+    }
+  end,
+  -- format_on_save = {
+  --   timeout_ms = 500,
+  --   lsp_format = "fallback",
+  -- },
 })
