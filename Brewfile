@@ -30,6 +30,8 @@ brew "typst"                                   # A typsetting compiler
 brew "cmake"                                   # Meta build system for C++
 brew "ghostscript"                             # For PDFs
 brew "bitwarden-cli"                           # CLI for password manager
+brew "pgcli"                                   # Postgres DB Interface
+brew "postgresql@18"                           # Postgres DB
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                      # Keyboard macros and mapping
