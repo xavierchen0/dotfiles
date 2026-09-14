@@ -6,3 +6,7 @@ karabiner/automatic_backups/
 # Ignore raycast extension
 # Not important enough to VCS
 raycast/
+
+# pgcli
+pgcli/history
+pgcli/log
