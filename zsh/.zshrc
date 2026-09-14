@@ -95,3 +95,7 @@ export FPATH="${HOME}/.local/share/eza/completions/zsh:$FPATH"
 # -- television shell integration --
 # https://alexpasmantier.github.io/television/docs/Users/shell-integration
 eval "$(tv init zsh)"
+
+# -- Postgresql --
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+alias start_pglocal='LC_ALL="en_US.UTF-8" /opt/homebrew/opt/postgresql@18/bin/postgres -D /opt/homebrew/var/postgresql@18'
