@@ -15,6 +15,7 @@ require("conform").setup({
       "ruff_organize_imports",
     },
     tex = { "latexindent" },
+    sql = { "sqlfluff" },
   },
   formatters = {
     latexindent = {
@@ -22,6 +23,15 @@ require("conform").setup({
     },
     prettier = {
       append_args = { "--prose-wrap=always" },
+    },
+    sqlfluff = {
+      command = "sqlfluff",
+      args = {
+        "format",
+        "-",
+      },
+      stdin = true,
+      exit_codes = { 0, 1 },
     },
   },
   format_on_save = function(bufnr)
@@ -41,7 +51,7 @@ require("conform").setup({
     end
 
     return {
-      timeout_ms = 500,
+      timeout_ms = 5000,
       lsp_format = "fallback",
     }
   end,
