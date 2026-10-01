@@ -80,6 +80,10 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
+# -- Make zsh understand text in terminal
+autoload -Uz select-word-style
+select-word-style bash
+
 # -- Yazi; y to enter Yazi, q to quit at cwd, Q to quit at previous dir --
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
