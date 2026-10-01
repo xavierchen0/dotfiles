@@ -4,6 +4,10 @@ Herein lies all the tools I use for my daily workflows. They are optimised for
 me, but I am always in search of better ways to improve the efficiency and
 productivity of my workflows.
 
+I adopt the _Minimalist Maximalist_ philosophy in which I always aim to minimise
+the number of tools and software I use, as long as it continues to maximise my
+productivity and efficiency.
+
 # Notable Mentions
 
 Neovim - Highly customisable editor that uses Vim Motions to navigate text and
