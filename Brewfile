@@ -34,6 +34,7 @@ brew "pgcli"                                   # Postgres DB Interface
 brew "postgresql@18"                           # Postgres DB
 brew "node"                                    # Latest node
 brew "hugo"                                    # Static-site generator
+brew "go"                                    # Golang programming language
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                      # Keyboard macros and mapping
