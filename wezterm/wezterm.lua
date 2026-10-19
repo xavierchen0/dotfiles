@@ -270,6 +270,12 @@ wezterm.on("gui-startup", function(cmd)
     workspace = "icloud",
     cwd = icloud_cwd,
   })
+  -- personal-site workspace
+  local personal_site_cwd = wezterm.home_dir .. "/dev/personal_site"
+  local personal_site_tab1, personal_site_t1_pane1, personal_site_window = mux.spawn_window({
+    workspace = "personal_site",
+    cwd = personal_site_cwd,
+  })
   -- it5001 workspace
   local it5001_cwd = wezterm.home_dir .. "/dev/classes/it5001"
   local it5001_tab1, it5001_t1_pane1, it5001_window = mux.spawn_window({
