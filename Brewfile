@@ -69,12 +69,12 @@ brew "tinymist"                                # LSP for Typst
 brew "harper"                                  # Grammar Checker LSP
 brew "llvm"                                    # Clangd C++ LSP
 brew "postgres-language-server"                # Postgres LSP
-brew "sqlfluff"                                # DB-agnostic linter and formatter
 
 # -- Formatters --
 brew "stylua"                                  # Lua formatter
 brew "prettier"                                # Prettier formatter
 brew "ruff"                                    # Python formatter and linter
+brew "sqlfluff"                                # DB-agnostic linter and formatter
 
 # -- Linters --
 brew "markdownlint-cli2"                       # Markdown linter
