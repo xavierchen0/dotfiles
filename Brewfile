@@ -35,6 +35,7 @@ brew "postgresql@18"                           # Postgres DB
 brew "node"                                    # Latest node
 brew "hugo"                                    # Static-site generator
 brew "go"                                      # Golang programming language
+brew "sass/sass/sass"                          # Dart Sass
 
 # -- Casks (GUI Apps) -- 
 cask "karabiner-elements"                      # Keyboard macros and mapping
