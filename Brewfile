@@ -63,6 +63,7 @@ cask "spotify"                                 # Music
 cask "antigravity-cli"                         # CLI for Gemini
 cask "codex"                                   # CLI for Chatgpt
 cask "vlc"                                     # Video player
+cask "anki"                                    # Flash cards
 
 # -- LSPs --
 brew "lua-language-server"                     # Lua language server
