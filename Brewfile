@@ -47,7 +47,6 @@ cask "google-chrome"                           # Browser
 cask "wezterm"                                 # Terminal
 cask "raycast"                                 # Better spotlight
 cask "mos"                                     # Smooth mouse scrolling 
-cask "hiddenbar"                               # Hide statusbar icons
 cask "stats"                                   # Computer statistic
 cask "whatsapp"                                # Chat app
 cask "telegram"                                # Chat app
