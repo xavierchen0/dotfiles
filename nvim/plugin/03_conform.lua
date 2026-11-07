@@ -46,7 +46,7 @@ require("conform").setup({
       return
     end
 
-    if bufname:match("%.config/my_lily58/keymap%.c$") then
+    if bufname:match("%.config/.-/keymap%.c$") then
       return
     end
 
