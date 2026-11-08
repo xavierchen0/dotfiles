@@ -42,6 +42,8 @@ alias bu="brew upgrade --verbose --dry-run"
 alias tw="typst watch --open sioyek"
 alias -s pdf=sioyek
 alias crun="clang++ -std=c++20 -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -g -O0"
+alias qleft="qmk flash -kb lily58/rev1 -km my_lily58 -e CONVERT_TO=rp2040_ce -bl uf2-split-left"
+alias qright="qmk flash -kb lily58/rev1 -km my_lily58 -e CONVERT_TO=rp2040_ce -bl uf2-split-right"
 
 # git
 alias gss="git status"
